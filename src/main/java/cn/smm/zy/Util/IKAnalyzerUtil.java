@@ -24,7 +24,7 @@ public class IKAnalyzerUtil {
     }
 
     public static void main(String[] args) throws IOException {
-        String text="老太太吃饭了么";
+        String text="张振是不是最厉害的哦";
         List<String> list=IKAnalyzerUtil.cut(text);
         System.out.println(list);
     }

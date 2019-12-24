@@ -112,8 +112,6 @@ public class invitationservice {
             zy_invitations= invitation.selectList(null);
             System.out.println("最后执行的关键字为空,查询全部");
         }
-
-
         return zy_invitations;
     }
 

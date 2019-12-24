@@ -30,13 +30,13 @@
         </div>
     </div>
     <!--搜索start-->
-    <form action="#" class="layui-form layui-form-pane">
+    <form action="search" method="post" class="layui-form layui-form-pane">
         <div class="layui-row" style="float: right;width: 350px;">
                 <div class="layui-col-md4">
                     <div class="layui-form-item" pane style="width:240px;">
                         <div class="layui-form-label">思考一下</div>
                         <div class="layui-input-block">
-                            <input type="text" required class="layui-input" style="width:240px;"/>
+                            <input type="text" id="search_title" name="search_title" required class="layui-input" style="width:240px;"/>
                         </div>
                     </div>
                 </div>
