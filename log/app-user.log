@@ -2948,3 +2948,29 @@ FTL stack trace ("~" means nesting-related):
 	- Failed at: ${gnamecontent.itt_title!"重试"}  [in template "freemarker/Gname.ftl" at line 6, column 12]
 ----] as the response has already been committed. As a result, the response may have the wrong status code.
 2019-12-24 15:26:23.294  WARN 9176 --- [http-nio-80-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.NullPointerException]
+2019-12-24 15:53:09.519  INFO 7880 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 7880 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-24 15:53:09.530  INFO 7880 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-24 15:53:09.640  INFO 7880 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-24 15:53:09.640  INFO 7880 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-24 15:53:12.002  INFO 7880 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-24 15:53:12.002  INFO 7880 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-24 15:53:12.083  INFO 7880 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 0 repository interfaces.
+2019-12-24 15:53:12.910  INFO 7880 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-24 15:53:13.992  INFO 7880 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-24 15:53:14.022  INFO 7880 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-24 15:53:14.022  INFO 7880 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-24 15:53:14.302  INFO 7880 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-24 15:53:14.302  INFO 7880 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4662 ms
+2019-12-24 15:53:16.402  WARN 7880 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_type.
+2019-12-24 15:53:16.644  WARN 7880 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_regisger_user.
+2019-12-24 15:53:17.126  INFO 7880 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-24 15:53:17.928  INFO 7880 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-24 15:53:18.220  INFO 7880 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-24 15:53:18.277  INFO 7880 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 10.899 seconds (JVM running for 14.412)
+2019-12-24 15:56:21.970  INFO 7880 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-24 15:56:21.970  INFO 7880 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-24 15:56:22.011  INFO 7880 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 41 ms
+2019-12-24 15:56:22.421  INFO 7880 --- [http-nio-80-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-24 15:56:22.421  INFO 7880 --- [http-nio-80-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-24 16:36:35.053  INFO 7880 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-24 16:36:36.373  INFO 7880 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
