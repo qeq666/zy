@@ -78,4 +78,9 @@ public class invitationservice {
     }
 
 
+    public List<zy_invitation> Iksearch
+
+
+
+
 }
