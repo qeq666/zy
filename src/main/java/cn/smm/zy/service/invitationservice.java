@@ -3,6 +3,7 @@ package cn.smm.zy.service;
 import cn.smm.zy.Dao.invitationMapper;
 import cn.smm.zy.Util.Mesg;
 import cn.smm.zy.pojo.zy_invitation;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.apache.ibatis.annotations.Select;
 import org.slf4j.LoggerFactory;
@@ -78,7 +79,43 @@ public class invitationservice {
     }
 
 
-    public List<zy_invitation> Iksearch
+    public List<zy_invitation> Iksearchresult (List<String> items){
+        QueryWrapper<zy_invitation> queryWrapper = new QueryWrapper<>();
+        List<zy_invitation> zy_invitations = null;
+        String s0 = items.get(0);
+        String s1 = items.get(1);
+        String s2 = items.get(2);
+        String colum = "itt_title";
+        QueryWrapper<zy_invitation>  tjany = null;/*条件构造器*/
+
+        if(!"".equals(s0) && !"".equals(s1) && !"".equals(s2)){
+            tjany = queryWrapper.like("itt_title", s0).or().like("itt_title", s1).or().like("itt_title", s2);
+            zy_invitations = invitation.selectList(tjany);
+            System.out.println("关键字都不为空都附加");
+        }else if("".equals(s0) && "".equals(s1) && "".equals(s2)){
+            zy_invitations= invitation.selectList(null);
+            zy_invitations = invitation.selectList(tjany);
+            System.out.println("关键字为空,查询全部");
+        }else if(!"".equals(s0) && "".equals(s1) && "".equals(s2)){
+            tjany = queryWrapper.like("itt_title", s0);
+            System.out.println("第一个关键字存在其他两个不存在");
+            zy_invitations = invitation.selectList(tjany);
+        }else if("".equals(s0) && !"".equals(s1) && "".equals(s2)){
+            tjany = queryWrapper.like("itt_title", s1);
+            System.out.println("第二个关键字存在其他两个不存在");
+            zy_invitations = invitation.selectList(tjany);
+        }else if("".equals(s0) && "".equals(s1) && !"".equals(s2)){
+            tjany = queryWrapper.like("itt_title", s2);
+            zy_invitations = invitation.selectList(tjany);
+            System.out.println("第三个关键字存在其他两个不存在");
+        }else{
+            zy_invitations= invitation.selectList(null);
+            System.out.println("最后执行的关键字为空,查询全部");
+        }
+
+
+        return zy_invitations;
+    }
 
 
 
