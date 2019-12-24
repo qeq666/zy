@@ -1,0 +1,24 @@
+.login_alert{position:fixed;bottom:0px;left:0px;width:100%;z-index:9999;}
+.login_alert_close{position:absolute;top:-10px;right:0px;z-index:1;cursor:pointer;}
+.login_alert_box{width:100%;text-align:center; background-color:rgba(61, 61, 61, 0.6); height:60px;}
+.login_alert_box div{cursor:default; font-family:'微软雅黑'; color:#66CCFF; font-size:26px; font-weight:bold; line-height:80px;}
+.login_alert_box div a{text-decoration:none;display:inline-block;padding:5px 20px; font-size:20px; color:#000; background-color:#00CC99; border-radius:4px; line-height:26px;}
+.login_alert_box div span{font-size:18px;}
+.login_alert{animation:show_alert_left 1.6s;-webkit-animation:show_alert_left 1.6s;-moz-animation:show_alert_left 1.6s;}
+.login_alert_box{background-color:rgba(0,0,0,0.6);height:60px;}
+.login_alert_box:hover{background-color:rgba(0,0,0,0.8);}
+.login_alert_box div{color:#66CCFF;font-size:26px;line-height:60px;}
+.login_alert_box div a{font-size:20px;line-height:26px;border-radius:4px;}
+
+@keyframes show_alert_left{
+    from{left:-100%;}
+    to{left:0px;}
+}
+@-webkit-keyframes show_alert_left{
+    from{left:-100%;}
+    to{left:0px;}
+}
+@-moz-keyframes show_alert_left{
+    from{left:-100%;}
+    to{left:0px;}
+}

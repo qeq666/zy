@@ -1,0 +1,30 @@
+server:
+  port: 80
+
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 944358609@qq.com
+    password: ghyaunmpgvhibahh
+    default-encoding: utf-8
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true #一定要开启ssl,不然会503 验证失败的
+
+
+  mybatis:
+    configuration:
+      map-underscore-to-camel-case: true
+
+
+system:
+  filepath: /vdb1/xxx/vue/resources
+  #windows下用这个filepath: D:\temp\upload
+  urlpath: D:\temp\upload
+logging:
+  level:
+    learning: debug
+  file: log/app-user.log
+

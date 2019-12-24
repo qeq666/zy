@@ -1,0 +1,25 @@
+.a_title{
+    font:  bold 14px 文鼎CS大黑;
+    text-decoration: none;
+}
+.tab_label{
+    font-size: 16px;
+    font:  bold 18px 文鼎特粗黑簡;
+}
+.tab_label:link{
+    color: #000000;
+}
+
+span .zy_tj{
+    font-size: 12px;
+    text-decoration: none;
+}
+span .zy_tj:hover{
+    color: #FF5D00;
+}
+span #zy_tj_back:hover{
+    background-color: #FF5D00;
+    color:#FFFFFF ;
+    transition: all .2s;
+    border-radius:5px ;
+}

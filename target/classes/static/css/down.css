@@ -1,0 +1,50 @@
+#fengexuxian{border-top:1px dashed #CCC;height:1px;overflow:hidden;margin-top:5px;margin-bottom:5px}
+.page-content {}
+.page-content-intro {float:left;width:740px;}
+.main-article .content-wrap {padding:30px 0 30px 20px;margin-bottom:15px;border-bottom:2px solid #0b588c;box-shadow:0 1px 0 #ccc;}
+.main-article .title {font-size:24px;color:#222;margin-bottom:15px;}
+.main-article .meta {color:#666;margin-bottom:25px;}
+.main-article .meta .ico, .time-count-down .ico, .down-url-wrap .ico,
+.main-article .down-url-wrap .sbtn .ico, .main-article .comment-div .ctitle .ico, .main-article .commentrespond .zsmiley .ico,
+.main-article .comment-quickreply-item .zsmiley .ico, .singlepage-scroll-item a, .main-article .share-div .digg .sbtn .ico,
+.main-article .share-div .digg .info .handico {display:inline-block;*display:inline;*zoom:1;width:14px;height:11px;margin-right:5px;background:url(http://comment.bjcnc.img.sohucs.com/pC8ahIK_png) no-repeat;}
+.main-article .meta .time {}
+.main-article .meta .author {margin-left:15px;}
+.main-article .meta .author .ico {width:11px;}
+.main-article .meta .author a {color:#2c3fb0;text-decoration:underline;}
+.main-article .meta .view {margin-left:15px;}
+.main-article .meta .view .ico {width:10px;height:6px;background-position:0 -13px;vertical-align:2px;}
+.main-article .meta .view b {font-weight:400;color:#2c3fb0;margin:0 5px;}
+.main-article .meta .comment {margin-left:15px;}
+.main-article .meta .comment .ico {background-position:0 -22px;}
+.main-article .meta .comment b {font-weight:400;color:#2c3fb0;margin-right:5px;}
+.main-article .content-intro {font-size:14px;}
+.main-article .content-intro a {color:#2c3fb0;}
+.main-article .content-intro h1 {padding:3px 10px;font-size:20px;color:#fff;background-color:#0b588c;}
+.main-article .content-intro h2 {padding:3px 10px;font-size:18px;color:#444;background-color:#d6d6d6;}
+.main-article .content-intro blockquote {border:1px solid #e9e9e9;border-left:4px solid #0b588c;font-size:14px;color:#0b588c;background-color:#fff;}
+.main-article .content-intro img {max-width:100%;height:auto;}
+.main-article .time-count-down {margin:15px 0 20px;font-size:20px;color:#222;}
+.main-article .time-count-down .ico {width:18px;height:18px;background-position:0 -53px;visibility:-3px;}
+.main-article .time-count-down b {color:#d00000;font-weight:400;}
+.main-article .time-count-down .tm {color:#cc1b1b;margin:0 5px;}
+.main-article .time-count-down .jtime {margin:0 2px;}
+.main-article .time-count-down .jtime .dd {color:#cc1b1b;margin:0 5px;}
+.main-article .time-count-down .jtime .hh-1, .main-article .time-count-down .jtime .mm-1, .main-article .time-count-down .jtime .ss-1 {color:#cc1b1b;margin-left:5px;}
+.main-article .time-count-down .jtime .hh-2, .main-article .time-count-down .jtime .mm-2, .main-article .time-count-down .jtime .ss-2 {color:#cc1b1b;margin-right:5px;}
+.main-article .keyword {margin-bottom:0;}
+.main-article .keyword b {color:#525252;font-weight:400;}
+.main-article .keyword a {color:#525252;margin-right:6px;}
+.main-article .down-url-wrap {margin-bottom:25px;}
+.main-article .down-url-wrap .tit {margin-bottom:15px;font-size:14px;color:#0b588c;font-weight:700;}
+.main-article .down-url-wrap .ico {width:15px;height:15px;background-position:0 -36px;vertical-align:-2px;}
+.main-article .down-url-wrap .sbtn {position:relative;z-index:1;display:inline-block;*display:inline;*zoom:1;height:37px;line-height:37px;padding-left:50px;padding-right:20px;margin-right:10px;margin-bottom:10px;border:1px solid #d7d7d7;border-width:1px 1px 4px;font-size:14px;font-weight:700;color:#0b588c;text-decoration:none;-moz-transition:none;-webkit-transition:none;-o-transition:none;transition:none;border-radius:2px;}
+.main-article .down-url-wrap .sbtn .ico {position:absolute;z-index:2;left:11px;top:14.5px;width:12px;height:8px;font-size:0;background-position:-63px -166px;}
+.main-article .down-url-wrap .sbtn .line {position:absolute;z-index:2;left:32px;top:0;height:37px;width:1px;background-color:#d7d7d7;}
+.main-article .down-url-wrap .sbtn:hover {background-color:#0b588c;border-color:#0b588c #0b588c #0b4972;color:#fff;}
+.main-article .down-url-wrap .sbtn:hover .ico {background-position:-80px -166px;}
+.main-article .down-url-wrap .sbtn:hover .line {background-color:#0b588c;}
+.main-article .share-div, .main-article .appraise-div, .main-article .newspage-nav, .main-article .comment-div {padding-top:20px;border-top:1px solid #ccc;margin-top:20px;}
+.main-article .newspage-nav {}
+.main-article .newspage-nav p {margin-bottom:10px;font-size:14px;}
+.main-article .newspage-nav a {color:#333;}
