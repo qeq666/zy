@@ -40,8 +40,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="layui-col-md2">
-                    <button class="layui-btn layui-btn-normal" style="margin-left: 168px">搜索</button>
+                <div class="layui-col-md2" style="margin-left: 168px">
+                    <button class="layui-btn layui-btn-normal" >搜索</button>
                 </div>
         </div>
 
