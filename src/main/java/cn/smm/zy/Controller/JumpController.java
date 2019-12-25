@@ -72,18 +72,17 @@ public class JumpController {
 
         return "freemarker/public/p_nav";
     }
+
     @RequestMapping("/p_nav_title")
     public String p_nav_title(){
 
         return "freemarker/public/p_nav_title";
     }
+    /*跳转关于我们*/
     @RequestMapping("/Gywm")
     public String Gywm(){
         return "freemarker/Gywm";
     }
-
-
-
     @RequestMapping("/sendf")
     public String sendf(String content) {
         System.out.println(content);

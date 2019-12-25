@@ -24,7 +24,7 @@
 
             <#list Notices as item>
                 <div class="row" style="padding-top: 15px">
-                    <span class="layui-badge">置顶</span><a href="findByidNotice/${item.id}">${item.title}</a><br>
+                    <span class="layui-badge"><#if item.kind == 2>置顶<#else>最新</#if></span><a href="findByidNotice/${item.id}">${item.title}</a><br>
                 </div>
             </#list>
         <#else>
@@ -38,7 +38,8 @@
 
 
 <script src="js/jquery-1.8.0.min.js"></script>
-<script src="layui.js"></script>
+<#--<script src="layui.js"></script>-->
+<script src="https://layui.hcwl520.com.cn/layui-v2.5.4/layui.js"></script>
 <script>
     layui.use(['element', 'carousel', 'layer'], function () {
         var element = layui.element, carousel = layui.carousel, layer = layui.layer;

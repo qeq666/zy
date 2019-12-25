@@ -53,7 +53,7 @@
             <li class="layui-nav-item"><a href="#">首页</a></li>
             <li class="layui-nav-item"><a href="projectlist01">项目展示</a></li>
             <li class="layui-nav-item"><a href="#">申请扶助</a></li>
-            <li class="layui-nav-item"><a href="#">寻找周边</a></li>
+            <li class="layui-nav-item"><a href="/zydwa" target="_blank">寻找周边</a></li>
             <li class="layui-nav-item"><a href="#">精品投稿</a></li>
             <li class="layui-nav-item"><a href="#">产品推广</a></li>
             <li class="layui-nav-item"><a href="#">留言建议</a></li>
@@ -142,25 +142,24 @@
                     <div class="layui-col-md3">
                         <img src="img/slt.jpg" alt="" style="width: 170px;height: 160px;border-radius: 5px">
                     </div>
-                    <div class="layui-col-md5">
-                        <span style="font-size: 16px"><a href="/gname/${item.id}" target="_blank" class="layui-edge-right" style="color: #009688">${item.itt_title!'没有内容'}</a></span>
+                    <div class="layui-col-md7">
+                        <a href="/gname/${item.id}" target="_blank" class="layui-edge-right" style="color: #009688">${item.itt_title!'没有内容'}</a>
                     </div>
                     <div class="layui-col-md5" style="padding-top: 5px">
-                        <span class="layui-icon layui-icon-username" style="color: #009688"></span>作者&nbsp;<span style="font-weight: bold">:</span>&nbsp;<a href="#">章大拿</a>
+                        <span class="layui-icon layui-icon-username" style="color: #009688"></span>作者&nbsp;<span style="font-weight: bold">:</span>&nbsp;<a href="#">匿名</a>
                         &nbsp;&nbsp;&nbsp;<span class="layui-icon layui-icon-notice" style="color: #009688"></span>时间 <span style="font-weight: bold">:</span>&nbsp;<a
                             href="#">${item.itt_createtime!'没有内容'}</a>
                         &nbsp;<span class="layui-icon layui-icon-rate" style="color: #009688"></span>&nbsp;<a
-                            href="#">${item.type!'没有内容'}</a>
+                                href="#">${item.type!'没有内容'}</a>
                     </div>
                     <div class="layui-col-md5" style="padding-top: 5px">
-                        <#--<a href="#">${item.itt_content!}</a>-->
                         <#if (item.itt_content?? && item.itt_content?length>30)>
-                                         ${item.itt_content?substring(0,30)}...
+                                         ${item.itt_content?substring(0,10)}...
                                   <#else>
                                          ${item.itt_content!'没有内容'}
                                   </#if>
                     </div>
-                    <div class="layui-col-md2" style="padding-top: 27px;padding-left: 530px"><button class="layui-btn " >阅读全文</button></div>
+                    <div class="layui-col-md2" style="padding-top: 27px;padding-left: 530px"><button class="layui-btn " onclick="location.href='/gname/${item.id}'">阅读全文</button></div>
                 </div>
             </div>
         </#list>
@@ -189,7 +188,7 @@
 <#--<script src="js/layui.js"></script>-->
 <script src="https://layui.hcwl520.com.cn/layui-v2.5.4/layui.js"></script>
 <script>
-    layui.use(['element','carousel','layer'], function(){
+    layui.use(['carousel','layer'], function(){
         var element = layui.element,carousel=layui.carousel,layer=layui.layer;
         //建造实例
         carousel.render({

@@ -45,7 +45,7 @@ public class searchController {
         } catch (Exception e) {
 
         }
-        /*System.out.println("分词过后" + list);*/
+        System.out.println("分词过后" + list);
         int size = list.size();
         List<zy_invitation> iksearchresult = invitationservice.Iksearchresult(size, list);
 

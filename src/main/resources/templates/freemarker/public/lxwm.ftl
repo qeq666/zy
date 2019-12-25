@@ -25,7 +25,8 @@
 
 </div>
 <script src="js/jquery-1.8.0.min.js"></script>
-<script src="layui.js"></script>
+<#--<script src="layui.js"></script>-->
+<script src="https://layui.hcwl520.com.cn/layui-v2.5.4/layui.js"></script>
 <script>
     layui.use(['element', 'carousel', 'layer'], function () {
         var element = layui.element, carousel = layui.carousel, layer = layui.layer;

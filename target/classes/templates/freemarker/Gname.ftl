@@ -39,7 +39,7 @@
                 <h3 class="tit">
                     <i class="ico"></i>文章附件
                 </h3>
-                <a href="#down" onclick="window.open('>/${gnamecontent.itt_downurl!'重试'}');return false;" class="sbtn" title=""><i class="ico"></i><i class="line"></i>百度网盘</a>  <a href="#down" onclick="window.open('${gnamecontent.itt_downurl!'重试'}'');return false;" class="sbtn" title=""><i class="ico"></i><i class="line"></i>蓝奏云</a>
+                <a href="#down" onclick="window.open('${gnamecontent.itt_downurl!'重试'}');return false;" class="sbtn" title=""><i class="ico"></i><i class="line"></i>百度网盘</a>  <a href="#down" onclick="window.open('${gnamecontent.itt_downurl!'重试'}'');return false;" class="sbtn" title=""><i class="ico"></i><i class="line"></i>蓝奏云</a>
             </div>
         </div>
     </div>
