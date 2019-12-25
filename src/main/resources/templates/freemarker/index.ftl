@@ -30,7 +30,7 @@
         </div>
     </div>
     <!--搜索start-->
-    <form action="search" method="post" class="layui-form layui-form-pane">
+    <form action="/search"  method="post" class="layui-form layui-form-pane">
         <div class="layui-row" style="float: right;width: 350px;">
                 <div class="layui-col-md4">
                     <div class="layui-form-item" pane style="width:240px;">
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="layui-col-md8">
+                <div class="layui-col-md2">
                     <button class="layui-btn layui-btn-normal" style="margin-left: 168px">搜索</button>
                 </div>
         </div>

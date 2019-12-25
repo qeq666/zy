@@ -28,3 +28,7 @@ logging:
     learning: debug
   file: log/app-user.log
 
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

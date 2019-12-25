@@ -1,0 +1,690 @@
+2019-12-25 00:06:14.494  INFO 11476 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 11476 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 00:06:14.514  INFO 11476 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 00:06:14.744  INFO 11476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 00:06:14.744  INFO 11476 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 00:06:17.628  INFO 11476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 00:06:17.648  INFO 11476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 00:06:17.748  INFO 11476 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 0 repository interfaces.
+2019-12-25 00:06:18.780  INFO 11476 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 00:06:19.604  INFO 11476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 00:06:19.634  INFO 11476 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 00:06:19.634  INFO 11476 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 00:06:19.846  INFO 11476 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 00:06:19.846  INFO 11476 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5102 ms
+2019-12-25 00:06:21.520  WARN 11476 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_type.
+2019-12-25 00:06:21.600  WARN 11476 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_regisger_user.
+2019-12-25 00:06:22.131  INFO 11476 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 00:06:23.042  INFO 11476 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 00:06:23.172  INFO 11476 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 00:06:23.172  INFO 11476 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 10.781 seconds (JVM running for 12.845)
+2019-12-25 00:07:17.491  INFO 11476 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 00:07:17.492  INFO 11476 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 00:07:17.562  INFO 11476 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 70 ms
+2019-12-25 00:07:18.434  INFO 11476 --- [http-nio-80-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 00:07:18.437  INFO 11476 --- [http-nio-80-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 00:07:20.880  WARN 11476 --- [http-nio-80-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379]
+2019-12-25 00:07:47.093  INFO 11476 --- [http-nio-80-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 00:07:48.948  INFO 11476 --- [http-nio-80-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 00:08:06.728  WARN 11476 --- [http-nio-80-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2019-12-25 17:55:25.769  INFO 2704 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 2704 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 17:55:25.776  INFO 2704 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 17:55:27.292  INFO 2704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 17:55:27.293  INFO 2704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 17:55:33.354  INFO 2704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 17:55:33.389  INFO 2704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 17:55:33.538  INFO 2704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59ms. Found 0 repository interfaces.
+2019-12-25 17:55:35.712  INFO 2704 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 17:55:38.601  INFO 2704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 17:55:38.694  INFO 2704 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 17:55:38.694  INFO 2704 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 17:55:39.427  INFO 2704 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 17:55:39.427  INFO 2704 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 12133 ms
+2019-12-25 17:55:46.465  WARN 2704 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_type.
+2019-12-25 17:55:46.581  WARN 2704 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_regisger_user.
+2019-12-25 17:55:47.850  INFO 2704 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 17:55:51.703  INFO 2704 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 17:55:51.988  INFO 2704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 17:55:51.995  INFO 2704 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 33.688 seconds (JVM running for 41.28)
+2019-12-25 17:56:22.231  INFO 6148 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 6148 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 17:56:22.237  INFO 6148 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 17:56:22.363  INFO 6148 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 17:56:22.364  INFO 6148 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 17:56:24.313  INFO 6148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 17:56:24.318  INFO 6148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 17:56:24.490  INFO 6148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131ms. Found 0 repository interfaces.
+2019-12-25 17:56:25.245  INFO 6148 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 17:56:25.973  INFO 6148 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 17:56:25.990  INFO 6148 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 17:56:25.991  INFO 6148 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 17:56:26.141  INFO 6148 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 17:56:26.142  INFO 6148 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3778 ms
+2019-12-25 17:56:27.584  WARN 6148 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_type.
+2019-12-25 17:56:27.732  WARN 6148 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_regisger_user.
+2019-12-25 17:56:28.332  INFO 6148 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 17:56:29.021  INFO 6148 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 17:56:29.111  INFO 6148 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 17:56:29.115  INFO 6148 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 7.826 seconds (JVM running for 9.862)
+2019-12-25 17:56:51.577  INFO 6148 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 17:56:51.580  INFO 6148 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 17:56:51.631  INFO 6148 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 50 ms
+2019-12-25 17:56:54.648  INFO 6148 --- [http-nio-80-exec-3] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 17:56:54.652  INFO 6148 --- [http-nio-80-exec-3] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 17:57:22.694  INFO 6148 --- [http-nio-80-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 17:57:24.909  INFO 6148 --- [http-nio-80-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 17:59:07.520  INFO 4072 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 4072 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 17:59:07.527  INFO 4072 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 17:59:07.611  INFO 4072 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 17:59:07.612  INFO 4072 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 17:59:09.080  INFO 4072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 17:59:09.084  INFO 4072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 17:59:09.147  INFO 4072 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 0 repository interfaces.
+2019-12-25 17:59:09.811  INFO 4072 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 17:59:10.758  INFO 4072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 17:59:10.779  INFO 4072 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 17:59:10.780  INFO 4072 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 17:59:11.016  INFO 4072 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 17:59:11.017  INFO 4072 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3405 ms
+2019-12-25 17:59:12.508  WARN 4072 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_type.
+2019-12-25 17:59:12.605  WARN 4072 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_regisger_user.
+2019-12-25 17:59:13.196  INFO 4072 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 17:59:13.940  INFO 4072 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 17:59:14.025  INFO 4072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 17:59:14.031  INFO 4072 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 7.427 seconds (JVM running for 9.63)
+2019-12-25 17:59:18.167  INFO 4072 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 17:59:18.167  INFO 4072 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 17:59:18.179  INFO 4072 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-12-25 17:59:18.530  WARN 4072 --- [http-nio-80-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 2, Size: 2]
+2019-12-25 17:59:38.088  INFO 4072 --- [http-nio-80-exec-6] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 17:59:38.094  INFO 4072 --- [http-nio-80-exec-6] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 17:59:39.496  INFO 4072 --- [http-nio-80-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 17:59:40.845  INFO 4072 --- [http-nio-80-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 17:59:44.972  WARN 4072 --- [http-nio-80-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 2, Size: 2]
+2019-12-25 18:00:27.584  INFO 3948 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 3948 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:00:27.588  INFO 3948 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:00:27.685  INFO 3948 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:00:27.686  INFO 3948 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:00:29.849  INFO 3948 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:00:29.856  INFO 3948 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:00:30.614  INFO 3948 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 652ms. Found 0 repository interfaces.
+2019-12-25 18:00:31.517  INFO 3948 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:00:32.598  INFO 3948 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:00:32.619  INFO 3948 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:00:32.620  INFO 3948 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:00:32.935  INFO 3948 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:00:32.936  INFO 3948 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5250 ms
+2019-12-25 18:00:35.298  WARN 3948 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_type.
+2019-12-25 18:00:35.490  WARN 3948 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_regisger_user.
+2019-12-25 18:00:36.392  INFO 3948 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:00:37.307  INFO 3948 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:00:37.405  INFO 3948 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:00:37.422  INFO 3948 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 11.854 seconds (JVM running for 18.614)
+2019-12-25 18:00:59.645  INFO 3948 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:00:59.645  INFO 3948 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:00:59.664  INFO 3948 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2019-12-25 18:01:04.208  INFO 3948 --- [http-nio-80-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:01:04.210  INFO 3948 --- [http-nio-80-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:01:04.986  INFO 3948 --- [http-nio-80-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:01:05.689  INFO 3948 --- [http-nio-80-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:01:14.024  WARN 3948 --- [http-nio-80-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 2, Size: 2]
+2019-12-25 18:02:28.590  INFO 8016 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 8016 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:02:28.595  INFO 8016 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:02:28.835  INFO 8016 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:02:28.836  INFO 8016 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:02:31.707  INFO 8016 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:02:31.712  INFO 8016 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:02:31.797  INFO 8016 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 0 repository interfaces.
+2019-12-25 18:02:32.954  INFO 8016 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:02:34.097  INFO 8016 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:02:34.144  INFO 8016 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:02:34.145  INFO 8016 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:02:34.541  INFO 8016 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:02:34.542  INFO 8016 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5705 ms
+2019-12-25 18:02:36.349  WARN 8016 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_type.
+2019-12-25 18:02:36.479  WARN 8016 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_regisger_user.
+2019-12-25 18:02:37.089  INFO 8016 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:02:37.954  INFO 8016 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:02:38.086  INFO 8016 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:02:38.092  INFO 8016 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 10.741 seconds (JVM running for 14.275)
+2019-12-25 18:02:42.295  INFO 8016 --- [http-nio-80-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:02:42.296  INFO 8016 --- [http-nio-80-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:02:42.344  INFO 8016 --- [http-nio-80-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 48 ms
+2019-12-25 18:02:45.882  INFO 8016 --- [http-nio-80-exec-7] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:02:45.889  INFO 8016 --- [http-nio-80-exec-7] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:02:47.680  INFO 8016 --- [http-nio-80-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:02:49.140  INFO 8016 --- [http-nio-80-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:02:55.669  WARN 8016 --- [http-nio-80-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 2, Size: 2]
+2019-12-25 18:05:59.088  INFO 7776 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 7776 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:05:59.094  INFO 7776 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:05:59.313  INFO 7776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:05:59.313  INFO 7776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:06:02.201  INFO 7776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:06:02.205  INFO 7776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:06:02.336  INFO 7776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 0 repository interfaces.
+2019-12-25 18:06:03.142  INFO 7776 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:06:04.042  INFO 7776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:06:04.060  INFO 7776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:06:04.061  INFO 7776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:06:04.593  INFO 7776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:06:04.593  INFO 7776 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5280 ms
+2019-12-25 18:06:07.173  WARN 7776 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_type.
+2019-12-25 18:06:07.348  WARN 7776 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_regisger_user.
+2019-12-25 18:06:08.144  INFO 7776 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:06:09.782  INFO 7776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:06:10.089  INFO 7776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:06:10.096  INFO 7776 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 12.573 seconds (JVM running for 16.192)
+2019-12-25 18:06:17.653  INFO 7776 --- [http-nio-80-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:06:17.654  INFO 7776 --- [http-nio-80-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:06:17.672  INFO 7776 --- [http-nio-80-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2019-12-25 18:06:21.008  INFO 7776 --- [http-nio-80-exec-5] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:06:21.012  INFO 7776 --- [http-nio-80-exec-5] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:06:22.835  INFO 7776 --- [http-nio-80-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:06:23.786  INFO 7776 --- [http-nio-80-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:06:30.104  INFO 7776 --- [http-nio-80-exec-4] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Request header is too large
+	at org.apache.coyote.http11.Http11InputBuffer.fill(Http11InputBuffer.java:721) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:449) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_131]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2019-12-25 18:07:25.224  INFO 7776 --- [http-nio-80-exec-8] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Request header is too large
+	at org.apache.coyote.http11.Http11InputBuffer.fill(Http11InputBuffer.java:721) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:449) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_131]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2019-12-25 18:10:57.963  INFO 7776 --- [Thread-17] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:10:58.231  INFO 7776 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-25 18:10:58.261  INFO 7776 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-25 18:10:59.403  INFO 7776 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 7776 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:10:59.407  INFO 7776 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:10:59.904  INFO 7776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:10:59.904  INFO 7776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:10:59.918  INFO 7776 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2019-12-25 18:11:00.123  INFO 7776 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:11:00.211  WARN 7776 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-25 18:11:00.276  INFO 7776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:11:00.277  INFO 7776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:11:00.278  INFO 7776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:11:00.306  INFO 7776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:11:00.306  INFO 7776 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 893 ms
+2019-12-25 18:11:00.368  WARN 7776 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'initController' defined in file [G:\zy11\zy\target\classes\cn\smm\zy\Controller\InitController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [cn.smm.zy.Controller.InitController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6646d021]
+2019-12-25 18:11:00.369  INFO 7776 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-12-25 18:11:00.603  INFO 7776 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-25 18:11:00.647 ERROR 7776 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'initController' defined in file [G:\zy11\zy\target\classes\cn\smm\zy\Controller\InitController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [cn.smm.zy.Controller.InitController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6646d021]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at cn.smm.zy.ZyApplication.main(ZyApplication.java:12) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_131]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [cn.smm.zy.Controller.InitController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6646d021]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:728) ~[spring-core-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:660) ~[spring-core-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:382) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:363) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:311) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 20 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Lcn/smm/zy/service/invitationservice;
+	at java.lang.Class.getDeclaredFields0(Native Method) ~[na:1.8.0_131]
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2583) ~[na:1.8.0_131]
+	at java.lang.Class.getDeclaredFields(Class.java:1916) ~[na:1.8.0_131]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:723) ~[spring-core-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: cn.smm.zy.service.invitationservice
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_131]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_131]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144) ~[spring-boot-devtools-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_131]
+	... 30 common frames omitted
+
+2019-12-25 18:12:06.008  INFO 7788 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 7788 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:12:06.014  INFO 7788 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:12:06.126  INFO 7788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:12:06.127  INFO 7788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:12:08.210  INFO 7788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:12:08.216  INFO 7788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:12:08.307  INFO 7788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55ms. Found 0 repository interfaces.
+2019-12-25 18:12:09.182  INFO 7788 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:12:09.983  INFO 7788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:12:10.010  INFO 7788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:12:10.011  INFO 7788 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:12:10.228  INFO 7788 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:12:10.228  INFO 7788 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4101 ms
+2019-12-25 18:12:11.876  WARN 7788 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_type.
+2019-12-25 18:12:11.996  WARN 7788 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_regisger_user.
+2019-12-25 18:12:12.527  INFO 7788 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:12:13.224  INFO 7788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:12:13.362  INFO 7788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:12:13.366  INFO 7788 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 8.913 seconds (JVM running for 13.731)
+2019-12-25 18:13:02.762  INFO 7788 --- [http-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:13:02.762  INFO 7788 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:13:02.786  INFO 7788 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2019-12-25 18:13:03.633  INFO 7788 --- [http-nio-80-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:13:03.636  INFO 7788 --- [http-nio-80-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:13:05.166  INFO 7788 --- [http-nio-80-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:13:06.094  INFO 7788 --- [http-nio-80-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:13:11.273  WARN 7788 --- [http-nio-80-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 2, Size: 2]
+2019-12-25 18:13:22.894  WARN 7788 --- [http-nio-80-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 2, Size: 2]
+2019-12-25 18:14:46.446  INFO 5584 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 5584 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:14:46.451  INFO 5584 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:14:46.549  INFO 5584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:14:46.550  INFO 5584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:14:48.177  INFO 5584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:14:48.182  INFO 5584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:14:48.281  INFO 5584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 0 repository interfaces.
+2019-12-25 18:14:48.980  INFO 5584 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:14:49.778  INFO 5584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:14:49.798  INFO 5584 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:14:49.799  INFO 5584 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:14:49.966  INFO 5584 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:14:49.967  INFO 5584 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3417 ms
+2019-12-25 18:14:51.211  WARN 5584 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_type.
+2019-12-25 18:14:51.293  WARN 5584 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_regisger_user.
+2019-12-25 18:14:51.659  INFO 5584 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:14:52.224  INFO 5584 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:14:52.321  INFO 5584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:14:52.326  INFO 5584 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 6.891 seconds (JVM running for 8.71)
+2019-12-25 18:15:00.183  INFO 5584 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:15:00.185  INFO 5584 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:15:00.198  INFO 5584 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-12-25 18:15:00.801  INFO 5584 --- [http-nio-80-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:15:00.804  INFO 5584 --- [http-nio-80-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:15:01.874  INFO 5584 --- [http-nio-80-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:15:02.773  INFO 5584 --- [http-nio-80-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:16:05.850  INFO 7756 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 7756 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:16:05.856  INFO 7756 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:16:05.986  INFO 7756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:16:05.987  INFO 7756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:16:07.987  INFO 7756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:16:07.998  INFO 7756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:16:08.084  INFO 7756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 0 repository interfaces.
+2019-12-25 18:16:09.593  INFO 7756 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:16:10.545  INFO 7756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:16:10.568  INFO 7756 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:16:10.568  INFO 7756 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:16:10.716  INFO 7756 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:16:10.716  INFO 7756 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4728 ms
+2019-12-25 18:16:11.955  WARN 7756 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_type.
+2019-12-25 18:16:12.045  WARN 7756 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_regisger_user.
+2019-12-25 18:16:12.592  INFO 7756 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:16:13.339  INFO 7756 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:16:19.364  INFO 5900 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 5900 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:16:19.371  INFO 5900 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:16:19.815  INFO 5900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:16:19.815  INFO 5900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:16:22.510  INFO 5900 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:16:22.516  INFO 5900 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:16:22.590  INFO 5900 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 0 repository interfaces.
+2019-12-25 18:16:23.342  INFO 5900 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:16:23.961  INFO 5900 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:16:23.986  INFO 5900 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:16:23.986  INFO 5900 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:16:24.212  INFO 5900 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:16:24.213  INFO 5900 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4398 ms
+2019-12-25 18:16:25.818  WARN 5900 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_type.
+2019-12-25 18:16:25.907  WARN 5900 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: cn.smm.zy.pojo.zy_regisger_user.
+2019-12-25 18:16:26.369  INFO 5900 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:16:27.019  INFO 5900 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:16:27.134  INFO 5900 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:16:27.138  INFO 5900 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 9.961 seconds (JVM running for 12.484)
+2019-12-25 18:16:40.137  INFO 5900 --- [http-nio-80-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:16:40.138  INFO 5900 --- [http-nio-80-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:16:40.160  INFO 5900 --- [http-nio-80-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2019-12-25 18:16:41.334  INFO 5900 --- [http-nio-80-exec-9] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:16:41.338  INFO 5900 --- [http-nio-80-exec-9] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:16:42.789  INFO 5900 --- [http-nio-80-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:16:43.630  INFO 5900 --- [http-nio-80-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:20:08.890  WARN 5900 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m24s908ms654µs729ns).
+2019-12-25 18:20:08.991  INFO 5900 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:20:09.134  INFO 5900 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-25 18:20:09.150  INFO 5900 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-25 18:20:17.039  INFO 7000 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 7000 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:20:17.046  INFO 7000 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:20:17.257  INFO 7000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:20:17.258  INFO 7000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:20:19.020  INFO 7000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:20:19.026  INFO 7000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:20:19.102  INFO 7000 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 0 repository interfaces.
+2019-12-25 18:20:20.310  INFO 7000 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:20:21.024  INFO 7000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:20:21.040  INFO 7000 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:20:21.040  INFO 7000 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:20:21.180  INFO 7000 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:20:21.181  INFO 7000 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3921 ms
+2019-12-25 18:20:23.159  INFO 7000 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:20:23.826  INFO 7000 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:20:23.914  INFO 7000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:20:23.920  INFO 7000 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 8.094 seconds (JVM running for 10.522)
+2019-12-25 18:20:40.633  INFO 7000 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:20:40.634  INFO 7000 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:20:40.653  INFO 7000 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2019-12-25 18:20:40.706  WARN 7000 --- [http-nio-80-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2019-12-25 18:21:11.697  INFO 7000 --- [http-nio-80-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:21:11.701  INFO 7000 --- [http-nio-80-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:21:12.614  INFO 7000 --- [http-nio-80-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:21:13.437  INFO 7000 --- [http-nio-80-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:22:03.361  WARN 7000 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s820ms984µs108ns).
+2019-12-25 18:22:24.080  INFO 7000 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:22:24.222  INFO 7000 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-25 18:22:24.242  INFO 7000 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-25 18:22:36.610  INFO 3608 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 3608 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:22:36.614  INFO 3608 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:22:36.715  INFO 3608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:22:36.716  INFO 3608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:22:38.050  INFO 3608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:22:38.054  INFO 3608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:22:38.116  INFO 3608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 0 repository interfaces.
+2019-12-25 18:22:38.674  INFO 3608 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:22:39.203  INFO 3608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:22:39.219  INFO 3608 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:22:39.220  INFO 3608 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:22:39.441  INFO 3608 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:22:39.442  INFO 3608 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2725 ms
+2019-12-25 18:22:41.355  INFO 3608 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:22:41.931  INFO 3608 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:22:42.005  INFO 3608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:22:42.009  INFO 3608 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 6.844 seconds (JVM running for 9.004)
+2019-12-25 18:22:56.896  INFO 3608 --- [http-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:22:56.901  INFO 3608 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:22:56.912  INFO 3608 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-12-25 18:22:58.367  INFO 3608 --- [http-nio-80-exec-6] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:22:58.373  INFO 3608 --- [http-nio-80-exec-6] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:22:59.465  INFO 3608 --- [http-nio-80-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:23:00.216  INFO 3608 --- [http-nio-80-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:23:08.352  WARN 3608 --- [http-nio-80-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 1, Size: 1]
+2019-12-25 18:24:28.721  INFO 6628 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 6628 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:24:28.726  INFO 6628 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:24:28.816  INFO 6628 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:24:28.817  INFO 6628 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:24:30.270  INFO 6628 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:24:30.274  INFO 6628 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:24:30.339  INFO 6628 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33ms. Found 0 repository interfaces.
+2019-12-25 18:24:31.129  INFO 6628 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:24:32.032  INFO 6628 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:24:32.048  INFO 6628 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:24:32.049  INFO 6628 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:24:32.204  INFO 6628 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:24:32.205  INFO 6628 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3388 ms
+2019-12-25 18:24:34.294  INFO 6628 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:24:34.939  INFO 6628 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:24:35.014  INFO 6628 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:24:35.018  INFO 6628 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 7.263 seconds (JVM running for 9.214)
+2019-12-25 18:25:14.342  INFO 6628 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:25:14.343  INFO 6628 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:25:14.482  INFO 6628 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 139 ms
+2019-12-25 18:25:14.814  INFO 6628 --- [http-nio-80-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:25:14.817  INFO 6628 --- [http-nio-80-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:25:16.299  INFO 6628 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:25:17.200  INFO 6628 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:25:27.399  WARN 6628 --- [http-nio-80-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 1, Size: 1]
+2019-12-25 18:25:51.216  INFO 4616 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 4616 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:25:51.225  INFO 4616 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:25:51.392  INFO 4616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:25:51.393  INFO 4616 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:25:54.451  INFO 4616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:25:54.468  INFO 4616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:25:54.593  INFO 4616 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 0 repository interfaces.
+2019-12-25 18:25:56.242  INFO 4616 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:25:57.699  INFO 4616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:25:57.735  INFO 4616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:25:57.736  INFO 4616 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:25:58.146  INFO 4616 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:25:58.147  INFO 4616 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6753 ms
+2019-12-25 18:26:01.914  INFO 4616 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:26:03.390  INFO 4616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:26:03.589  INFO 4616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:26:03.603  INFO 4616 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 14.978 seconds (JVM running for 19.037)
+2019-12-25 18:26:03.826  INFO 4616 --- [http-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:26:03.827  INFO 4616 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:26:03.859  INFO 4616 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 32 ms
+2019-12-25 18:26:04.297  INFO 4616 --- [http-nio-80-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:26:04.300  INFO 4616 --- [http-nio-80-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:26:05.643  INFO 4616 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:26:07.040  INFO 4616 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:26:38.187  WARN 4616 --- [http-nio-80-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 1, Size: 1]
+2019-12-25 18:26:38.360  INFO 4616 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:26:38.708  INFO 4616 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-25 18:26:38.954  INFO 4616 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-25 18:26:58.173  INFO 7688 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 7688 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:26:58.188  INFO 7688 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:26:58.560  INFO 7688 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:26:58.562  INFO 7688 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:27:01.379  INFO 7688 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:27:01.384  INFO 7688 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:27:01.465  INFO 7688 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 0 repository interfaces.
+2019-12-25 18:27:02.557  INFO 7688 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:27:03.648  INFO 7688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:27:03.684  INFO 7688 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:27:03.704  INFO 7688 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:27:04.034  INFO 7688 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:27:04.035  INFO 7688 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5471 ms
+2019-12-25 18:27:07.769  INFO 7688 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:27:09.514  INFO 7688 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:27:09.667  INFO 7688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:27:09.675  INFO 7688 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 13.608 seconds (JVM running for 17.079)
+2019-12-25 18:27:11.129  INFO 7688 --- [http-nio-80-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:27:11.130  INFO 7688 --- [http-nio-80-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:27:11.155  INFO 7688 --- [http-nio-80-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 25 ms
+2019-12-25 18:27:12.878  INFO 7688 --- [http-nio-80-exec-5] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:27:12.885  INFO 7688 --- [http-nio-80-exec-5] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:27:14.643  INFO 7688 --- [http-nio-80-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:27:16.362  INFO 7688 --- [http-nio-80-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:27:33.977  WARN 7688 --- [http-nio-80-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 1, Size: 1]
+2019-12-25 18:27:37.532  INFO 7688 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:27:37.667  INFO 7688 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-25 18:27:37.685  INFO 7688 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-25 18:27:46.885  INFO 5224 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 5224 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:27:46.891  INFO 5224 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:27:47.159  INFO 5224 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:27:47.159  INFO 5224 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:27:50.400  INFO 5224 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:27:50.417  INFO 5224 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:27:50.568  INFO 5224 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86ms. Found 0 repository interfaces.
+2019-12-25 18:27:52.148  INFO 5224 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:27:53.616  INFO 5224 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:27:53.664  INFO 5224 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:27:53.667  INFO 5224 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:27:53.972  INFO 5224 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:27:53.973  INFO 5224 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6812 ms
+2019-12-25 18:27:57.423  INFO 5224 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:27:58.332  INFO 5224 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:27:58.444  INFO 5224 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:27:58.449  INFO 5224 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 14.382 seconds (JVM running for 18.809)
+2019-12-25 18:28:16.904  INFO 5224 --- [http-nio-80-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:28:16.904  INFO 5224 --- [http-nio-80-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:28:16.922  INFO 5224 --- [http-nio-80-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2019-12-25 18:28:19.168  INFO 5224 --- [http-nio-80-exec-10] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:28:19.171  INFO 5224 --- [http-nio-80-exec-10] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:28:20.060  INFO 5224 --- [http-nio-80-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:28:20.883  INFO 5224 --- [http-nio-80-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:28:45.434  WARN 5224 --- [http-nio-80-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 1, Size: 1]
+2019-12-25 18:28:45.626  INFO 5224 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:28:45.644  WARN 5224 --- [http-nio-80-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'jumpController': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)]
+2019-12-25 18:28:45.647  WARN 5224 --- [http-nio-80-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'jumpController': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)]
+2019-12-25 18:28:45.937  INFO 5224 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-25 18:28:46.095  INFO 5224 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-25 18:28:55.978  INFO 3528 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 3528 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:28:56.017  INFO 3528 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:28:56.496  INFO 3528 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:28:56.498  INFO 3528 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:28:59.371  INFO 3528 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:28:59.379  INFO 3528 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:28:59.480  INFO 3528 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 0 repository interfaces.
+2019-12-25 18:29:00.692  INFO 3528 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:29:01.975  INFO 3528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:29:02.025  INFO 3528 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:29:02.026  INFO 3528 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:29:02.275  INFO 3528 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:29:02.294  INFO 3528 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5794 ms
+2019-12-25 18:29:05.579  INFO 3528 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:29:06.846  INFO 3528 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:29:07.011  INFO 3528 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:29:07.019  INFO 3528 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 13.359 seconds (JVM running for 17.885)
+2019-12-25 18:29:14.049  INFO 3528 --- [http-nio-80-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:29:14.050  INFO 3528 --- [http-nio-80-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:29:14.099  INFO 3528 --- [http-nio-80-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 49 ms
+2019-12-25 18:29:15.936  INFO 3528 --- [http-nio-80-exec-4] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:29:15.939  INFO 3528 --- [http-nio-80-exec-4] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:29:16.966  INFO 3528 --- [http-nio-80-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:29:18.128  INFO 3528 --- [http-nio-80-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:30:00.224  WARN 3528 --- [http-nio-80-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 1, Size: 1]
+2019-12-25 18:30:00.386  INFO 3528 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:30:00.411  WARN 3528 --- [http-nio-80-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'jumpController': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)]
+2019-12-25 18:30:00.409  WARN 3528 --- [http-nio-80-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'jumpController': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)]
+2019-12-25 18:30:00.598  INFO 3528 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-25 18:30:00.668  INFO 3528 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-25 18:30:55.568  INFO 980 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 980 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:30:55.575  INFO 980 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:30:55.827  INFO 980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:30:55.829  INFO 980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:30:58.313  INFO 980 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:30:58.321  INFO 980 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:30:58.430  INFO 980 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 0 repository interfaces.
+2019-12-25 18:30:59.590  INFO 980 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:31:01.023  INFO 980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:31:01.056  INFO 980 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:31:01.057  INFO 980 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:31:01.314  INFO 980 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:31:01.315  INFO 980 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5461 ms
+2019-12-25 18:31:04.139  INFO 980 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:31:05.098  INFO 980 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:31:05.198  INFO 980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:31:05.205  INFO 980 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 11.933 seconds (JVM running for 14.891)
+2019-12-25 18:31:05.435  INFO 980 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:31:05.436  INFO 980 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:31:05.451  INFO 980 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2019-12-25 18:31:05.706  INFO 980 --- [http-nio-80-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:31:05.710  INFO 980 --- [http-nio-80-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:31:07.111  INFO 980 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:31:07.856  INFO 980 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:37:41.645  WARN 980 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m33s677ms767µs362ns).
+2019-12-25 18:37:41.650  WARN 980 --- [http-nio-80-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 1, Size: 1]
+2019-12-25 18:37:41.900  INFO 980 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:37:42.163  INFO 980 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-25 18:37:42.635  INFO 980 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-25 18:38:17.977  INFO 6860 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 6860 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:38:17.982  INFO 6860 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:38:18.091  INFO 6860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:38:18.091  INFO 6860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:38:19.807  INFO 6860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:38:19.814  INFO 6860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:38:19.906  INFO 6860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45ms. Found 0 repository interfaces.
+2019-12-25 18:38:20.665  INFO 6860 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:38:21.299  INFO 6860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:38:21.323  INFO 6860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:38:21.324  INFO 6860 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:38:21.484  INFO 6860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:38:21.485  INFO 6860 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3394 ms
+2019-12-25 18:38:23.253  INFO 6860 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:38:23.898  INFO 6860 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:38:24.014  INFO 6860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:38:24.019  INFO 6860 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 7.053 seconds (JVM running for 9.073)
+2019-12-25 18:38:39.357  INFO 6860 --- [http-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:38:39.357  INFO 6860 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:38:39.374  INFO 6860 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2019-12-25 18:38:40.760  INFO 6860 --- [http-nio-80-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:38:40.763  INFO 6860 --- [http-nio-80-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:38:41.823  INFO 6860 --- [http-nio-80-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:38:45.845  INFO 6860 --- [http-nio-80-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:39:32.528  WARN 6860 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s571ms308µs843ns).
+2019-12-25 18:39:32.695  INFO 6860 --- [http-nio-80-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Request header is too large
+	at org.apache.coyote.http11.Http11InputBuffer.fill(Http11InputBuffer.java:721) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:449) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_131]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+
+2019-12-25 18:39:32.773  INFO 6860 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:39:32.952  INFO 6860 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-25 18:39:32.993  INFO 6860 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-25 18:39:41.305  INFO 7384 --- [restartedMain] cn.smm.zy.ZyApplication                  : Starting ZyApplication on PC-20191029PWXM with PID 7384 (G:\zy11\zy\target\classes started by Administrator in G:\zy11\zy)
+2019-12-25 18:39:41.310  INFO 7384 --- [restartedMain] cn.smm.zy.ZyApplication                  : No active profile set, falling back to default profiles: default
+2019-12-25 18:39:41.406  INFO 7384 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-25 18:39:41.407  INFO 7384 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-25 18:39:42.410  INFO 7384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-25 18:39:42.413  INFO 7384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-25 18:39:42.467  INFO 7384 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+2019-12-25 18:39:42.947  INFO 7384 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-25 18:39:43.393  INFO 7384 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2019-12-25 18:39:43.406  INFO 7384 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-25 18:39:43.406  INFO 7384 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-25 18:39:43.523  INFO 7384 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-25 18:39:43.524  INFO 7384 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2116 ms
+2019-12-25 18:39:44.963  INFO 7384 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-25 18:39:45.557  INFO 7384 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-25 18:39:45.628  INFO 7384 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2019-12-25 18:39:45.632  INFO 7384 --- [restartedMain] cn.smm.zy.ZyApplication                  : Started ZyApplication in 5.507 seconds (JVM running for 7.427)
+2019-12-25 18:40:23.848  INFO 7384 --- [http-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-25 18:40:23.849  INFO 7384 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-25 18:40:23.864  INFO 7384 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2019-12-25 18:40:27.531  INFO 7384 --- [http-nio-80-exec-3] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-12-25 18:40:27.534  INFO 7384 --- [http-nio-80-exec-3] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-12-25 18:40:28.313  INFO 7384 --- [http-nio-80-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-25 18:40:28.987  INFO 7384 --- [http-nio-80-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-25 18:41:04.808  INFO 7384 --- [http-nio-80-exec-3] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Request header is too large
+	at org.apache.coyote.http11.Http11InputBuffer.fill(Http11InputBuffer.java:721) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:449) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:292) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_131]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+

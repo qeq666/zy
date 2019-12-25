@@ -47,17 +47,17 @@ public class invitationservice {
     public List<zy_invitation> getzy_invitations() {
         String key = "news";
         List<zy_invitation> zy_invitations = (List<zy_invitation>) redisTemplate.opsForValue().get(key);
-        if(zy_invitations==null||zy_invitations.equals("")){
+        if (zy_invitations == null || zy_invitations.equals("")) {
             List<zy_invitation> itts = invitation.selectList(new QueryWrapper<zy_invitation>().orderByDesc("itt_kind"));
-            redisTemplate.opsForValue().set(key,itts);
+            redisTemplate.opsForValue().set(key, itts);
             System.out.println("Redis缓存不存在该数据,数据库查询中");
             System.out.println("数据查询成功,放入缓存,未设置失效时间");
             zy_invitations = (List<zy_invitation>) redisTemplate.opsForValue().get(key);
-        }else{
+        } else {
             System.out.println("Redis缓存已有数据,无需数据库查询。");
             zy_invitations = (List<zy_invitation>) redisTemplate.opsForValue().get(key);
         }
-        for (zy_invitation zs:zy_invitations) {
+        for (zy_invitation zs : zy_invitations) {
             System.out.println(zs.getItt_kind());
         }
         return zy_invitations;
@@ -79,43 +79,67 @@ public class invitationservice {
     }
 
 
-    public List<zy_invitation> Iksearchresult (List<String> items){
+    public List<zy_invitation> Iksearchresult(Integer size ,List<String> items) {
         QueryWrapper<zy_invitation> queryWrapper = new QueryWrapper<>();
         List<zy_invitation> zy_invitations = null;
-        String s0 = items.get(0);
-        String s1 = items.get(1);
-        String s2 = items.get(2);
+        String s0 = null;
+        String s1 = null;
+        String s2 = null;
+        if(size>2){
+            s0 = items.get(0);
+            s1 = items.get(1);
+            s2 = items.get(2);
+        }else if(size>1){
+            s0 = items.get(0);
+            s1 = items.get(1);
+        }else if(size>0){
+            s0 = items.get(0);
+        }else{
+            s0 = "";
+            s1 = "";
+            s2 = "";
+        }
+       /* if ("".equals(items.get(0))) {
+            s0 = "";
+        } else if ("".equals(items.get(1))) {
+            s1 = "";
+        } else if ("".equals(items.get(2))) {
+            s2 = "";
+        } else {
+            s0 = items.get(0);
+            s1 = items.get(1);
+            s2 = items.get(2);
+        }*/
+        System.out.println();
         String colum = "itt_title";
-        QueryWrapper<zy_invitation>  tjany = null;/*条件构造器*/
+        QueryWrapper<zy_invitation> tjany = null;/*条件构造器*/
 
-        if(!"".equals(s0) && !"".equals(s1) && !"".equals(s2)){
+        if (!"".equals(s0) && !"".equals(s1) && !"".equals(s2)) {
             tjany = queryWrapper.like("itt_title", s0).or().like("itt_title", s1).or().like("itt_title", s2);
             zy_invitations = invitation.selectList(tjany);
             System.out.println("关键字都不为空都附加");
-        }else if("".equals(s0) && "".equals(s1) && "".equals(s2)){
-            zy_invitations= invitation.selectList(null);
+        } else if ("".equals(s0) && "".equals(s1) && "".equals(s2)) {
+            zy_invitations = invitation.selectList(null);
             zy_invitations = invitation.selectList(tjany);
             System.out.println("关键字为空,查询全部");
-        }else if(!"".equals(s0) && "".equals(s1) && "".equals(s2)){
+        } else if (!"".equals(s0) && "".equals(s1) && "".equals(s2)) {
             tjany = queryWrapper.like("itt_title", s0);
             System.out.println("第一个关键字存在其他两个不存在");
             zy_invitations = invitation.selectList(tjany);
-        }else if("".equals(s0) && !"".equals(s1) && "".equals(s2)){
+        } else if ("".equals(s0) && !"".equals(s1) && "".equals(s2)) {
             tjany = queryWrapper.like("itt_title", s1);
             System.out.println("第二个关键字存在其他两个不存在");
             zy_invitations = invitation.selectList(tjany);
-        }else if("".equals(s0) && "".equals(s1) && !"".equals(s2)){
+        } else if ("".equals(s0) && "".equals(s1) && !"".equals(s2)) {
             tjany = queryWrapper.like("itt_title", s2);
             zy_invitations = invitation.selectList(tjany);
             System.out.println("第三个关键字存在其他两个不存在");
-        }else{
-            zy_invitations= invitation.selectList(null);
+        } else {
+            zy_invitations = invitation.selectList(null);
             System.out.println("最后执行的关键字为空,查询全部");
         }
         return zy_invitations;
     }
-
-
 
 
 }
