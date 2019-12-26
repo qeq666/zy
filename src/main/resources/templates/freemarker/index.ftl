@@ -165,6 +165,12 @@
         </#list>
 
         </div>
+<#--        <div class="layui-col-md12" style="margin-left: 80%">
+            <#if Session["sehmsg"]?exists>
+                存在的值
+            </#if>
+            <h3>${sehmsg!' '}</h3>
+        </div>-->
         <!--平台公告-联系我们-->
         <div class="layui-col-md4" style="padding-top: 50px;padding-left: 30px;">
             <div class="layui-col-md6 layui-tab-content" >

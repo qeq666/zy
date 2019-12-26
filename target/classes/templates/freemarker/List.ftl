@@ -4,7 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>众游项目展示</title>
-    <link rel="stylesheet" href="css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/layui.css" media="all">
+    <style>
+        a{ text-decoration:none}
+        #n{margin:10px auto; width:920px; border:1px solid #CCC;font-size:12px; line-height:30px;}
+        #n a{ padding:0 4px; color:#333}
+        /* 以上CSS与模块无关 */
+        .ep-pages{padding:10px 12px;clear:both;text-align:center;font-family:Arial, "\5B8B\4F53", sans-serif;font-size:14px;vertical-align:top}
+        .ep-pages a, .ep-pages span{display:inline-block;height:23px;line-height:23px;padding:0 8px;margin:5px 1px 0 0;background:#fff;border:1px solid #e5e5e5;overflow:hidden;vertical-align:top}
+        .ep-pages a:hover{background:#cc1b1b;border:1px solid #cc1b1b;text-decoration:none}
+        .ep-pages a, .ep-pages a:visited{color:#252525}
+        .ep-pages a:hover, .ep-pages a:active{color:#ffffff}
+        .ep-pages .current{background:#cc1b1b;border:1px solid #cc1b1b;color:#fff}
+        .ep-pages a.current, .ep-pages a.current:visited{color:#ffffff}
+        .ep-pages a.current:hover, .ep-pages a.current:active{color:#ffffff}
+        .ep-pages-ctrl{font-family:"\5B8B\4F53", sans-serif;font-weight:bold;font-size:16px}
+        .ep-pages-e5e5e5{color:#e5e5e5}
+        .ep-pages-all{font-size:12px;vertical-align:top}
+    </style>
 </head>
 <body>
 <iframe  src="p_nav_title" scrolling="no" style=";overflow:scroll;width:100%;height: 80px;;" frameborder="0"></iframe>
@@ -61,7 +78,25 @@
             这里引用的右边最新信息和联系我们
         </div>
         <div class="layui-col-md12" >
-            <div id="demo0"></div>
+
+            <#if pageNo = pageTotal >
+                <div class="ep-pages" style="margin-right: 30%">
+                    <span class="ep-pages-e5e5e5">首页</span>
+                    <span class="ep-pages-ctrl ep-pages-e5e5e5">&lt;
+                </span> <a href="pageList?pageNo=${pageNo-1}" target="_self" class="current">上一页</a>
+                    <a href="#" target="_self">共${pageTotal}页</a>
+                    </span> <a href="#" target="_self" class="current">当前第${pageNo}页</a>
+
+                </div>
+                <#elseif pageNo == 1>
+                <div class="ep-pages" style="margin-right: 30%">
+                <span class="ep-pages-e5e5e5">首页</span>
+                <span class="ep-pages-ctrl ep-pages-e5e5e5">&lt;
+                </span> <a href="#" target="_self" class="current">当前第${pageNo}页</a>
+                    <a href="#" target="_self">共${pageTotal}页</a>
+                </span> <a href="pageList?pageNo=${pageNo+1}" target="_self" class="current">下一页</a>
+            </div>
+            </#if>
         </div>
         <div class="layui-col-md12" style="padding-left: 30%;">
             众游网络版权所有|2019~2022
@@ -69,7 +104,7 @@
     </div>
 </div>
 
-<script src="js/jquery-1.8.0.min.js"></script>
+<script src="../js/jquery-1.8.0.min.js"></script>
 <#--<script src="layui.js"></script>-->
 <script src="https://heerey525.github.io/layui-v2.4.3/layui-v2.4.5/layui.js"></script>
 <script>
@@ -77,57 +112,6 @@
         var carousel = layui.carousel
             , element = layui.element
             ,laypage = layui.laypage;
-        //建造实例
-        //完整功能
-        //总页数低于页码总数
-        laypage.render({
-            elem: 'demo0'
-            ,count: 50 //数据总数
-        });
-
-        //总页数大于页码总数
-        laypage.render({
-            elem: 'demo1'
-            ,count: 70 //数据总数
-            ,jump: function(obj){
-                console.log(obj)
-            }
-        });
-
-        //自定义样式
-        laypage.render({
-            elem: 'demo2'
-            ,count: 100
-            ,theme: '#1E9FFF'
-        });
-        laypage.render({
-            elem: 'demo2-1'
-            ,count: 100
-            ,theme: '#FF5722'
-        });
-        laypage.render({
-            elem: 'demo2-2'
-            ,count: 100
-            ,theme: '#FFB800'
-        });
-
-        //自定义首页、尾页、上一页、下一页文本
-        laypage.render({
-            elem: 'demo3'
-            ,count: 100
-            ,first: '首页'
-            ,last: '尾页'
-            ,prev: '<em>←</em>'
-            ,next: '<em>→</em>'
-        });
-
-        //不显示首页尾页
-        laypage.render({
-            elem: 'demo4'
-            ,count: 100
-            ,first: false
-            ,last: false
-        });
 
     });
 </script>

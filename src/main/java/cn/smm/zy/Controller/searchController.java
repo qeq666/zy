@@ -72,7 +72,6 @@ public class searchController {
         req.setAttribute("apls", apls);
         session.setAttribute("msg",js.getMsg());
         session.setAttribute("view",js.getView());
-        System.out.println("11111111111111111111111111111");
         return "freemarker/index";
 }
 

@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="code">
-    <p>你太聪明了</p>
+    <p onclick="location.href='index'">你太聪明了</p>
 </div>
 <div class="road">
     <div class="shadow">

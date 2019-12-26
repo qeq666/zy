@@ -2,18 +2,17 @@ package cn.smm.zy.service;
 
 import cn.smm.zy.Dao.invitationMapper;
 import cn.smm.zy.Util.Mesg;
+import cn.smm.zy.Util.PageAndPageNoAndPageCur;
 import cn.smm.zy.pojo.zy_invitation;
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Select;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Dana on 2019/11/22.
@@ -79,6 +78,12 @@ public class invitationservice {
     }
 
 
+    /**
+     * ik  分词器+redis缓存查询数据  构成搜索
+     * @param size
+     * @param items
+     * @return
+     */
     public List<zy_invitation> Iksearchresult(Integer size ,List<String> items) {
         QueryWrapper<zy_invitation> queryWrapper = new QueryWrapper<>();
         List<zy_invitation> zy_invitations = null;
@@ -140,6 +145,49 @@ public class invitationservice {
         }
         return zy_invitations;
     }
+
+
+    public PageAndPageNoAndPageCur findpage(Integer pageNo, Integer size){
+        /*System.out.println("总页数"+zy_invitationIPage.getPages());
+        System.out.println("总记录数"+zy_invitationIPage.getTotal());*/
+        /**
+         * 储存要返回的分页数据
+         */
+        PageAndPageNoAndPageCur array = null;
+        List<zy_invitation> ittpages = null;
+        IPage<zy_invitation> zy_invitationIPage = null;
+       String Pastkey = "pagekey";
+       String keyNo = "pageNo";
+       String Pages = "tolcount";
+        redisTemplate.delete(Pastkey);
+        List<zy_invitation> keys = (List<zy_invitation>) redisTemplate.opsForValue().get(Pastkey);
+        if(keys==null||"".equals(keys)){
+            Page<zy_invitation> pages = new Page<>(pageNo,size);
+            QueryWrapper<zy_invitation> waper = new QueryWrapper<>();
+            zy_invitationIPage= invitation.selectPage(pages,waper);
+            List<zy_invitation> records = zy_invitationIPage.getRecords();
+            redisTemplate.opsForValue().set(Pastkey,records);/*查出来放Redis*/
+            ittpages = (List<zy_invitation>) redisTemplate.opsForValue().get(Pastkey);/*放进去再从redis查出来返回出去*/
+            /*System.out.println("当前第"+zy_invitationIPage.getCurrent()+"页"+"共"+zy_invitationIPage.getTotal()+"页");*/
+            /*本来想的把当前页下一页方redis
+            redisTemplate.opsForValue().set(keyNo,zy_invitationIPage.getCurrent());
+            redisTemplate.opsForValue().set(tolcount,zy_invitationIPage.getTotal());*/
+            System.out.println("分页数据来自M");
+            redisTemplate.opsForValue().set(keyNo,zy_invitationIPage.getCurrent());
+            redisTemplate.opsForValue().set(Pages,zy_invitationIPage.getPages());
+        }else{
+            System.out.println("分页数据来自R");
+            /*redis有数据*/
+            ittpages = (List<zy_invitation>) redisTemplate.opsForValue().get(Pastkey);/*放进去再从redis查出来返回出去*/
+        }
+        Long getpageNos = (Long) redisTemplate.opsForValue().get(keyNo);
+        Long getPages = (Long) redisTemplate.opsForValue().get(Pages);
+        array = new PageAndPageNoAndPageCur(getpageNos,getPages,ittpages);
+        return array;
+    }
+
+
+
 
 
 }

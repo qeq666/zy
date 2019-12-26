@@ -129,9 +129,10 @@
 </ul>
 <div id="container" style="width: 70%;height: 748px;float: right;"></div>
 <div class="info">
-    <a href="#">心动了!我也要来发布一份。</a>
+    <a href="JumpShares">心动了!我也要来发布一份。</a>
 </div>
-<script src="layui.js"></script>
+<#--<script src="layui.js"></script>-->
+<script src="https://layui.hcwl520.com.cn/layui-v2.5.4/layui.js"></script>
 <script type="text/javascript"
         src="https://webapi.amap.com/maps?v=1.4.15&key=bdc6b4745e57a3b82f107bb5ff53e59f"></script>
 <script type="text/javascript">    //地图初始化时，在地图上添加一个marker标记,鼠标点击marker可弹出自定义的信息窗体

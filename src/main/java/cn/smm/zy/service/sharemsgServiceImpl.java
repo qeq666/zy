@@ -29,7 +29,11 @@ public class sharemsgServiceImpl  {
     public sharemsg findbyid(Integer id){
         sharemsg sharemsg = sharemsgmp.selectById(id);
         return sharemsg;
+    }
 
+    public Integer addShrasMsg(sharemsg sharemsg){
+        int insert = sharemsgmp.insert(sharemsg);
+        return insert;
     }
 
 

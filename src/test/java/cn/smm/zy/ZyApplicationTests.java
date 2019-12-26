@@ -1,12 +1,15 @@
 package cn.smm.zy;
 
+import cn.smm.zy.pojo.zy_invitation;
 import cn.smm.zy.pojo.zy_user;
+import cn.smm.zy.service.invitationservice;
 import cn.smm.zy.service.zy_userService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -29,7 +32,10 @@ class ZyApplicationTests {
     private String from;
     @Autowired
     private cn.smm.zy.service.zy_userService zy_userService;
-
+    @Autowired
+    private cn.smm.zy.service.invitationservice invitationservice;
+    @Autowired
+    private RedisTemplate<String, Object> redisTemplate;
 
     @Test
     void contextLoads() {
@@ -49,10 +55,13 @@ class ZyApplicationTests {
         mailSender.send(smm);*/
         /*zy_user findbyid = zy_userService.findbyid("944358609@qq.com");
         System.out.println(findbyid);*/
+        /*List<zy_invitation> findpage = invitationservice.findpage(1, 2);*/
+        /*redisTemplate.opsForValue().set("keyNo","1");
+        redisTemplate.opsForValue().set("keyToocount","2");*/
+        System.out.println(redisTemplate.opsForValue().get("keyNo"));
+        System.out.println(redisTemplate.opsForValue().get("keyToocount"));
 
-
-
-     }
+    }
     }
 
 

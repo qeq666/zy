@@ -21,6 +21,11 @@ public class ImgsServiceImpl {
         return imgs;
     }
 
+    public Imgs findByid(Integer id){
+        Imgs imgs = ImgsMp.selectById(id);
+        return imgs;
+    }
+
 
 
 }
