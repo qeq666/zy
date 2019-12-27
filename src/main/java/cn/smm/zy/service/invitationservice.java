@@ -70,11 +70,12 @@ public class invitationservice {
         return delete;
     }
 
-    public List<zy_invitation> queryByid(Integer id) {
-        QueryWrapper<zy_invitation> queryWrapper = new QueryWrapper<>();
+    public zy_invitation queryByid(Integer id) {
+        /*QueryWrapper<zy_invitation> queryWrapper = new QueryWrapper<>();
         queryWrapper.lambda().eq(zy_invitation::getId, id);
-        List<zy_invitation> zy_invitations = invitation.selectList(queryWrapper);
-        return zy_invitations;
+        List<zy_invitation> zy_invitations = invitation.selectList(queryWrapper);*/
+        zy_invitation zy_invitation = invitation.selectById(id);
+        return zy_invitation;
     }
 
 
@@ -184,6 +185,19 @@ public class invitationservice {
         Long getPages = (Long) redisTemplate.opsForValue().get(Pages);
         array = new PageAndPageNoAndPageCur(getpageNos,getPages,ittpages);
         return array;
+    }
+
+
+    /**
+     * 置顶帖子
+     * @param zy_invitation
+     * @return
+     */
+    public Integer updateTop(zy_invitation zy_invitation){
+        String key = "news";
+        redisTemplate.delete(key);
+        int top = invitation.updateById(zy_invitation);
+        return top;
     }
 
 

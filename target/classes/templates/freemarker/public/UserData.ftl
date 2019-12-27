@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/layui.css">
 </head>
 <body>
-<form class="layui-form" action="">
+<form class="layui-form" action="/updateinfoByid/${user.id}">
     <div class="layui-main">
         <div class="layui-container">
             <div class="layui-row">
@@ -49,7 +49,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">擅长技能</label>
                         <div class="layui-input-block">
-                            <input type="text" name="type" value="暂时没有" id="type" required lay-verify="required" style="width: 200px; "
+                            <input type="text" name="type" value="${user.user_remark}" id="type" required lay-verify="required" style="width: 200px; "
                                    placeholder="技能标签" autocomplete="off" class="layui-input">
                         </div>
                     </div>

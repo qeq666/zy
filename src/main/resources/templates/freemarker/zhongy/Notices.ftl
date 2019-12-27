@@ -37,23 +37,21 @@
                   <td>
                       <div class="button-group">
                           <#if us_item.kind == 1>
-                                <a type="button" class="button border-main" href="#"><span class="icon-edit"></span>置顶</a>
+                                <a type="button" class="button border-main" href="/topdesc/${us_item.id}"><span class="icon-edit"></span>置顶</a>
                               <#else>
-                                  <a class="button border-red" href="/Thaw/${us_item.id}" ><span class="icon-trash-o"></span>
+                                  <a class="button border-red" href="/Notop/${us_item.id}" ><span class="icon-trash-o"></span>
                                       取消置顶
                                   </a>
                           </#if>
-
-
                       </div>
                   </td>
+                  <td><a type="button" class="button border-main" href="/del/${us_item.id}"><span class="icon-edit"></span>删除</a></td>
               </tr>
               <#else>
               暂时没有公告
           </#list>
           <#else>
               游
-
       </#if>
   </table>
 </div>

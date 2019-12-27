@@ -68,5 +68,19 @@ public class zy_userService {
         return zy_user;
     }
 
+    /*修改个人信息*/
+    public Integer updateuserinfo(zy_user zy_user){
+        int i = zy_userMapper.updateById(zy_user);
+        return i;
+    }
+
+    /**
+     * 根据id 查询用户信息
+     * @param byid
+     * @return
+     */
+    public zy_user findByid(Integer byid){
+        return zy_userMapper.selectById(byid);
+    }
 
 }

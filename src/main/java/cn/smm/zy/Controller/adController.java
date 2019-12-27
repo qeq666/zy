@@ -246,7 +246,7 @@ public class adController {
      * @return
      */
     @RequestMapping("/loginck")
-    public String adLogin(HttpServletRequest req) {
+    public String adLogin(HttpServletRequest req,HttpSession session) {
         json_N json = null;
         List<zy_admin> zy_admins = zy_adminService.QyeryList();
         if (req.getSession().getAttribute("simpleCaptcha").equals(req.getParameter("code"))) {
@@ -263,8 +263,8 @@ public class adController {
         } else {
             json = new json_N("验证码错误或密码错误", "/adlogin");
         }
-        req.setAttribute("msg", json.getMsg());
-        req.setAttribute("view", json.getView());
+        session.setAttribute("msg", json.getMsg());
+        session.setAttribute("view", json.getView());
         return "freemarker/zhongy/Jump";
     }
     /*更新网页基本信息*/
@@ -454,6 +454,110 @@ public class adController {
         return "freemarker/index";
     }
 
+    /*跳转修改项目置顶页面参数为帖子ID*/
+    @RequestMapping("/updateinfo/{id}")
+    public String JumpUpdateinfo(@PathVariable("id") Integer id,HttpSession session){
+        zy_invitation zy_invitation = invitationservice.queryByid(id);
+        session.setAttribute("userone",zy_invitation);
+        return "freemarker/zhongy/updateinfo";
+    }
+
+
+    /**
+     * 修改一条信息置顶
+     * @return
+     */
+    @RequestMapping("/updatetopOne")
+    public String shenrTop(HttpServletRequest req,HttpSession session){
+        json_N json = null;
+        String istop = null;
+        if(req.getParameter("ittop")==null || req.getParameter("ittop").equals("")||req.getParameter("ittop").equals("1")){
+            istop= "2";
+        }else{
+            istop= "2";
+        }
+        zy_invitation newittion = invitationservice.queryByid(Integer.parseInt(req.getParameter("iid")));
+        newittion.setItt_title(req.getParameter("title"));
+        newittion.setItt_kind(Integer.parseInt(istop));
+        Integer integer = invitationservice.updateTop(newittion);
+        if(integer>0){
+            json = new json_N("修改成功","IttList");
+        }else{
+            json = new json_N("网络异常","IttList");
+        }
+        session.setAttribute("msg", json.getMsg());
+        session.setAttribute("view", json.getView());
+        return "freemarker/zhongy/Jump";
+    }
+
+    /**
+     * 置顶一条公告
+     * @return
+     */
+    @RequestMapping("/topdesc/{byid}")
+    public String updadesc(@PathVariable("byid") Integer byid,HttpSession session){
+        json_N json = null;
+        zy_standinner byinfo = zy_standinnerServiceimpl.findByinfo(byid);
+        Integer kind = byinfo.getKind();
+        if(kind==1){
+            byinfo.setKind(2);
+        }else{
+            byinfo.setKind(2);
+        }
+        Integer integer = zy_standinnerServiceimpl.updateTop(byinfo);
+        if(integer>0){
+            json = new json_N("置顶成功","/NewticsList");
+        }else{
+            json = new json_N("点击的有点快了歇一会","/NewticsList");
+        }
+        session.setAttribute("msg", json.getMsg());
+        session.setAttribute("view", json.getView());
+        return "freemarker/zhongy/Jump";
+    }
+    /**
+     * 置顶一条公告
+     * @return
+     */
+    @RequestMapping("/Notop/{byid}")
+    public String updadescNotop(@PathVariable("byid") Integer byid,HttpSession session){
+        json_N json = null;
+        zy_standinner byinfo = zy_standinnerServiceimpl.findByinfo(byid);
+        Integer kind = byinfo.getKind();
+        if(kind==2){
+            byinfo.setKind(1);
+        }else{
+            byinfo.setKind(1);
+        }
+        Integer integer = zy_standinnerServiceimpl.updateTop(byinfo);
+        if(integer>0){
+            json = new json_N("取消置顶成功","/NewticsList");
+        }else{
+            json = new json_N("点击的有点快了歇一会","/NewticsList");
+        }
+        session.setAttribute("msg", json.getMsg());
+        session.setAttribute("view", json.getView());
+        return "freemarker/zhongy/Jump";
+    }
+
+
+    /**
+     * 删除公告
+     * @param byid
+     * @return
+     */
+    @RequestMapping("/del/{byid}")
+    public String deledesc(@PathVariable("byid")Integer byid,HttpSession session){
+        json_N json = null;
+        Integer deledesc = zy_standinnerServiceimpl.deledesc(byid);
+        if(deledesc>0){
+            json = new json_N("删除成功","/NewticsList");
+        }else{
+            json = new json_N("点击的有点快了歇一会","/NewticsList");
+        }
+        session.setAttribute("msg", json.getMsg());
+        session.setAttribute("view", json.getView());
+        return "freemarker/zhongy/Jump";
+    }
 
 
 

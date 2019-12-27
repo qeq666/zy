@@ -9,19 +9,22 @@
             margin: 0;
             padding: 0;
         }
+        .btnbutto a{
+            margin-left: 3%;
+        }
     </style>
 </head>
 <body>
 <div class="layui-container">
     <!--登录注册-->
-    <div class="layui-col-md12">
-        <div class="layui-col-md3">
-            <span class="layui-breadcrumb" lay-separator="|">
+    <div class="layui-col-md12" style="z-index: 1">
+        <div class="layui-col-md4">
+            <span class="btnbutto" lay-separator="|">
                 <#if Session["uid"]?exists>
                     <a href="OnData">欢迎您${Session.uid!'登陆成功'}</a>
-                    <a href="OnData">个人资料</a>-->
+                    <a href="OnData">个人资料</a>
+                    <a href="/Cancellation">注销</a>
                     <#else>
-                        不存在
                     <a href="/login">登录</a>
                     <a href="rgt">注册</a>
                     <a href="">找回</a>
@@ -119,13 +122,13 @@
             <div class="layui-tab">
                 <ul class="layui-tab-title">
                     <li class="layui-this">最新公告</li>
-                    <li>联系我们</li>
+                    <li >联系我们</li>
                 </ul>
                 <div class="layui-tab-content">
                     <div class="layui-tab-item layui-show">
                         <iframe  src="standesc" scrolling="no" style=";overflow:hidden;width:100%;height: auto;;" frameborder="0"></iframe>
                     </div>
-                    <div class="layui-tab-item">
+                    <div class="layui-tab-item ">
                         <iframe  src="lxwm" scrolling="no" style=";overflow:hidden;width:100%;height: auto" frameborder="0"></iframe>
                     </div>
                 </div>
@@ -137,13 +140,14 @@
         <div class="layui-col-md9">
 
             <#list itts!'没有内容' as item >
-            <div class="layui-row" style="padding-top: 30px">
+            <div class="layui-row" style="padding-top: 50px">
                 <div class="layui-tab-item layui-show">
                     <div class="layui-col-md3">
                         <img src="img/slt.jpg" alt="" style="width: 170px;height: 160px;border-radius: 5px">
                     </div>
                     <div class="layui-col-md7">
                         <a href="/gname/${item.id}" target="_blank" class="layui-edge-right" style="color: #009688">${item.itt_title!'没有内容'}</a>
+                        <#if item.itt_kind == 2><span class="layui-badge" style="margin-left: 3%">置顶</span></#if>
                     </div>
                     <div class="layui-col-md5" style="padding-top: 5px">
                         <span class="layui-icon layui-icon-username" style="color: #009688"></span>作者&nbsp;<span style="font-weight: bold">:</span>&nbsp;<a href="#">匿名</a>
@@ -186,8 +190,11 @@
         </div>
 
     </div>
-        <div class="layui-col-md8" style="padding-left: 30%">
+        <div class="layui-col-md8" style="padding-left: 50%">
             ${idxinfo.home_topinfo }
+        </div>
+        <div class="layui-col-md10" style="padding-left: 30%">
+            <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1278521370'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1278521370%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
         </div>
 </div>
 </div>

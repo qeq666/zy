@@ -2,7 +2,9 @@ package cn.smm.zy.Controller;
 import cn.smm.zy.Util.ToolUtil;
 import cn.smm.zy.Util.json_N;
 import cn.smm.zy.pojo.zy_invitation;
+import cn.smm.zy.pojo.zy_user;
 import cn.smm.zy.service.invitationservice;
+import cn.smm.zy.service.zy_userService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +26,8 @@ public class userController {
 
     @Autowired
     private invitationservice invitationservice;
+    @Autowired
+    private cn.smm.zy.service.zy_userService zy_userService;
 
     /**senditt
      * 注销用户
@@ -110,7 +114,25 @@ public class userController {
         return str.toString();
     }
 
-
+    @RequestMapping("/updateinfoByid/{byid}")
+    public String updateUserInfo(@PathVariable("byid")Integer byid,HttpServletRequest request,HttpSession session){
+        json_N json = null;
+        zy_user zy_user = zy_userService.findByid(byid);
+        String boydata = request.getParameter("boydata");
+        String type = request.getParameter("type");
+        String title = request.getParameter("title");
+        zy_user.setUser_remark(type);
+        zy_user.setUser_realname(title);
+        Integer updateuserinfo = zy_userService.updateuserinfo(zy_user);
+        if(updateuserinfo>0){
+            json = new json_N("修改成功","/index");
+        }else{
+            json = new json_N("点击的有点快了歇一会","/index");
+        }
+        session.setAttribute("msg", json.getMsg());
+        session.setAttribute("view", json.getView());
+        return "freemarker/Jump";
+    }
 
 
 

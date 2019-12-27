@@ -78,7 +78,7 @@
                 <td>${Itts_item.itt_title}</td>
                 <td>${Itts_item.type}</td>
                 <td>${Itts_item.itt_createtime}</td>
-                <td><div class="button-group"> <a class="button border-main" href="add.ftl"><span class="icon-edit"></span> 修改</a> <a class="button border-red" href="/IttdeleteByd/${Itts_item.id}" "><span class="icon-trash-o"></span> 删除</a> </div></td>
+                <td><div class="button-group"> <a class="button border-main" href="updateinfo/${Itts_item.id}"><span class="icon-edit"></span> 修改</a> <a class="button border-red" href="/IttdeleteByd/${Itts_item.id}" "><span class="icon-trash-o"></span> 删除</a> </div></td>
             </tr>
             </#list>
         </#if>
