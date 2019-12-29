@@ -16,7 +16,7 @@
 <div class="panel admin-panel">
     <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>修改信息</strong></div>
     <div class="body-content">
-        <form method="post" class="form-x" action="/updatetopOne">
+        <form method="post" class="form-x" action="/updatrType">
             <input type="hidden" name="iid" id="iid" value="${userone.id}">
             <div class="form-group">
                 <div class="label">

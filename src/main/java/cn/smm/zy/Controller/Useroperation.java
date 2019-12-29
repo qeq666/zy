@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import java.util.UUID;
 import cn.smm.zy.service.invitationservice;
 
@@ -58,7 +59,7 @@ public class Useroperation {
                     );
                     Object addinvitation = invitationservice.addinvitation(
                             new zy_invitation(req.getParameter("title"), req.getParameter("edit"),
-                            ToolUtil.getDate(), create,
+                            new Date(), create,
                             0, 0, 0, filePath + fileName.toString(),null,1
                     ));
 

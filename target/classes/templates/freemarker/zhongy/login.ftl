@@ -38,7 +38,8 @@
                     <div class="form-group">
                         <div class="field">
                             <input type="text" class="input input-big" name="code" placeholder="填写右侧的验证码" data-validate="required:请填写右侧的验证码" />
-                           <img src="http://127.0.0.1/api/captcha" id="cpcode" name="cpcode" alt="" width="100" height="32" class="passcode" style="height:43px;cursor:pointer;" onclick="this.src=this.src+'?'">
+                           <#--<img src="http://bbs.free-http.svipss.top/api/captcha" id="cpcode" name="cpcode" alt="" width="100" height="32" class="passcode" style="height:43px;cursor:pointer;" onclick="this.src=this.src+'?'">-->
+                            <img src="http://127.0.0.1/api/captcha" id="cpcode" name="cpcode" alt="" width="100" height="32" class="passcode" style="height:43px;cursor:pointer;" onclick="this.src=this.src+'?'">
                         </div>
                     </div>
                 </div>

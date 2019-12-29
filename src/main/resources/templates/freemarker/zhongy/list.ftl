@@ -12,48 +12,26 @@
 <script src="js/pintuer.js"></script>
 </head>
 <body>
-<form method="post" action="" id="listform">
+<form method="post" action="swchList" id="listform">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong> <a href="" style="float:right; display:none;">添加字段</a></div>
     <div class="padding border-bottom">
       <ul class="search" style="padding-left:10px;">
-        <li> <a class="button border-main icon-plus-square-o" href="add.ftl"> 添加内容</a> </li>
         <li>搜索：</li>
-        <li>首页
-          <select name="s_ishome" class="input" onchange="changesearch()" style="width:60px; line-height:17px; display:inline-block">
-            <option value="">选择</option>
-            <option value="1">是</option>
-            <option value="0">否</option>
-          </select>
-          &nbsp;&nbsp;
-          推荐
-          <select name="s_isvouch" class="input" onchange="changesearch()"  style="width:60px; line-height:17px;display:inline-block">
-            <option value="">选择</option>
-            <option value="1">是</option>
-            <option value="0">否</option>
-          </select>
-          &nbsp;&nbsp;
-          置顶
-          <select name="s_istop" class="input" onchange="changesearch()"  style="width:60px; line-height:17px;display:inline-block">
-            <option value="">选择</option>
-            <option value="1">是</option>
-            <option value="0">否</option>
-          </select>
-        </li>
+
         <if condition="$iscid eq 1">
           <li>
-            <select name="cid" class="input" style="width:200px; line-height:17px;" onchange="changesearch()">
+            <select name="sechtype" id="sechtype" class="input" style="width:200px; line-height:17px;" >
               <option value="">请选择分类</option>
-              <option value="">产品分类</option>
-              <option value="">产品分类</option>
-              <option value="">产品分类</option>
-              <option value="">产品分类</option>
+              <#list apls1 as item_type >
+                <option value="${item_type.t_id}">${item_type.t_type}</option>
+              </#list>
             </select>
           </li>
         </if>
         <li>
-          <input type="text" placeholder="请输入搜索关键字" name="keywords" class="input" style="width:250px; line-height:17px;display:inline-block" />
-          <a href="javascript:void(0)" class="button border-main icon-search" onclick="changesearch()" > 搜索</a></li>
+          <input type="text" name="title" id="title" placeholder="请输入搜索关键字" name="keywords" class="input" style="width:250px; line-height:17px;display:inline-block" />
+          <button class="button border-main icon-search" type="submit"> 搜索</button></li>
       </ul>
     </div>
     <table class="table table-hover text-center">
@@ -74,64 +52,31 @@
               <tr>
                 <td style="text-align:left; padding-left:20px;"><input type="checkbox" name="id[]" value="" />
                  ${Itts_item.id}</td>
-                <td width="10%"><img src="https://s2.ax1x.com/2019/12/02/QuhRfI.png" alt="" width="70" height="50" /></td>
+                <td width="10%"><img src="${Itts_item.itt_img01}" alt="" width="70" height="50" /></td>
                 <td>${Itts_item.itt_title}</td>
                 <td>${Itts_item.type}</td>
-                <td>${Itts_item.itt_createtime}</td>
-                <td><div class="button-group"> <a class="button border-main" href="updateinfo/${Itts_item.id}"><span class="icon-edit"></span> 修改</a> <a class="button border-red" href="/IttdeleteByd/${Itts_item.id}" "><span class="icon-trash-o"></span> 删除</a> </div></td>
+                <td>${Itts_item.itt_createtime?string("yyyy-MM-dd")}</td>
+                <td><#if Itts_item.itt_kind == 2>是<#else >否</#if></td>
+                <td><div class="button-group"> <a class="button border-main" href="updateinfo/${Itts_item.id}"><span class="icon-edit"></span> 修改</a> <a class="button border-red" href="/IttdeleteByd/${Itts_item.id}"><span class="icon-trash-o"></span> 删除</a> </div></td>
             </tr>
             </#list>
         </#if>
 
+
       <tr>
-        <td style="text-align:left; padding:19px 0;padding-left:20px;"><input type="checkbox" id="checkall"/>
-          全选 </td>
-        <td colspan="7" style="text-align:left;padding-left:20px;"><a href="javascript:void(0)" class="button border-red icon-trash-o" style="padding:5px 15px;" onclick="DelSelect()"> 删除</a> <a href="javascript:void(0)" style="padding:5px 15px; margin:0 10px;" class="button border-blue icon-edit" onclick="sorts()"> 排序</a> 操作：
-          <select name="ishome" style="padding:5px 15px; border:1px solid #ddd;" onchange="changeishome(this)">
-            <option value="">首页</option>
-            <option value="1">是</option>
-            <option value="0">否</option>
-          </select>
-          <select name="isvouch" style="padding:5px 15px; border:1px solid #ddd;" onchange="changeisvouch(this)">
-            <option value="">推荐</option>
-            <option value="1">是</option>
-            <option value="0">否</option>
-          </select>
-          <select name="istop" style="padding:5px 15px; border:1px solid #ddd;" onchange="changeistop(this)">
-            <option value="">置顶</option>
-            <option value="1">是</option>
-            <option value="0">否</option>
-          </select>
-          &nbsp;&nbsp;&nbsp;
-          
-          移动到：
-          <select name="movecid" style="padding:5px 15px; border:1px solid #ddd;" onchange="changecate(this)">
-            <option value="">请选择分类</option>
-            <option value="">产品分类</option>
-            <option value="">产品分类</option>
-            <option value="">产品分类</option>
-            <option value="">产品分类</option>
-          </select>
-          <select name="copynum" style="padding:5px 15px; border:1px solid #ddd;" onchange="changecopy(this)">
-            <option value="">请选择复制</option>
-            <option value="5">复制5条</option>
-            <option value="10">复制10条</option>
-            <option value="15">复制15条</option>
-            <option value="20">复制20条</option>
-          </select></td>
-      </tr>
-      <tr>
-        <td colspan="8"><div class="pagelist"> <a href="">上一页</a> <span class="current">1</span><a href="">2</a><a href="">3</a><a href="">下一页</a><a href="">尾页</a> </div></td>
+        <td colspan="8"><div class="pagelist">
+            <a href="">当前是第[${pageNo}]页</a>
+            <a href="/IttList?pageNo=${pageNo-1}">上一页</a>
+            <a href="/IttList?pageNo=${pageNo+1}">下一页</a>
+            <a href="">尾页</a>
+          </div>
+        </td>
       </tr>
     </table>
   </div>
 </form>
 <script type="text/javascript">
 
-//搜索
-function changesearch(){	
-		
-}
 
 //单个删除
 function del(id,mid,iscid){

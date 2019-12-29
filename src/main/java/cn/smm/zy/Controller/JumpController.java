@@ -43,9 +43,21 @@ public class JumpController {
     private cn.smm.zy.service.loginservice loginservice;
     @Autowired
     private zy_standinnerServiceimpl zy_standinnerServiceimpl;
+    @Autowired
+    private cn.smm.zy.service.zy_wheelimgsidService zy_wheelimgsidService;
+    @Autowired
+    private cn.smm.zy.service.zy_leaveServiceImpl zy_leaveServiceImpl;
+
+    @RequestMapping("/lyfk")
+    public String Jumplyfk(HttpSession session){
+        List<zy_leave> findall = zy_leaveServiceImpl.findall();
+        session.setAttribute("lovese",findall);
+        return "freemarker/lyfk";
+    }
 
     @RequestMapping("/index")
     public String index(HttpServletRequest req, HttpSession session) {
+        List<zy_wheelimgsid> zy_wheelimgsids = zy_wheelimgsidService.QyeryList();
         List<zy_invitation> zy_invitations = invitationservice.getzy_invitations();
         List<zy_invitation> items = new ArrayList<zy_invitation>();
         for (zy_invitation zy : zy_invitations) {
@@ -62,6 +74,7 @@ public class JumpController {
         List<zy_type> apls = type.apls();
         req.setAttribute("itts", items);
         req.setAttribute("apls", apls);
+        req.setAttribute("imgs", zy_wheelimgsids);
         return "freemarker/index";
     }
 
@@ -95,9 +108,11 @@ public class JumpController {
         return "freemarker/Gywm";
     }
 
+    /*跳转发帖页面*/
     @RequestMapping("/sendf")
-    public String sendf(String content) {
-        System.out.println(content);
+    public String sendf(String content,HttpSession session) {
+        List<zy_type> apls = type.apls();
+        session.setAttribute("types",apls);
         return "freemarker/sendf";
     }
 
@@ -125,6 +140,18 @@ public class JumpController {
         req.setAttribute("pageTotal", findpage.getPages());/*共多少页*/
         req.setAttribute("zy_invitations", findpage.getItts());
         return "freemarker/list";
+    }
+
+    /**
+     * 跳转公告详情
+     * @param id
+     * @return
+     */
+    @RequestMapping("/ggdesc/{id}")
+    public String jumpggxq(@PathVariable("id") Integer id,HttpSession session){
+        zy_standinner byinfo = zy_standinnerServiceimpl.findByinfo(id);
+        session.setAttribute("decsg",byinfo);
+        return "freemarker/ggxq";
     }
 
 
@@ -214,13 +241,13 @@ public class JumpController {
 
     /*删除帖子*/
     @RequestMapping("/IttdeleteByd/{id}")
-    public Object zhangzhen(@PathVariable("id") Integer id, HttpSession session) {
+    public String zhangzhen(@PathVariable("id") Integer id, HttpSession session) {
         Integer integer = invitationservice.deleteByid(id);
         json_N js = null;
         if (integer > 0) {
-            js = new json_N("删除成功", "/dana");
+            js = new json_N("删除成功", "/IttList");
         } else {
-            js = new json_N("重试一下吧", "/dana");
+            js = new json_N("重试一下吧", "/IttList");
         }
         session.setAttribute("msg", js.getMsg());
         session.setAttribute("view", js.getView());

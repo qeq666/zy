@@ -29,4 +29,14 @@ public class zy_wheelimgsidService {
         int insert = zy_wheelimgsidMapper.insert(zid);
         return insert;
     }
+
+    /**
+     * 删除一个轮播
+     * @param id
+     * @return
+     */
+    public Integer delByid(Integer id){
+        int i = zy_wheelimgsidMapper.deleteById(id);
+        return i;
+    }
 }

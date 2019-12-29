@@ -1,8 +1,10 @@
 package cn.smm.zy;
 
 import cn.smm.zy.pojo.zy_invitation;
+import cn.smm.zy.pojo.zy_type;
 import cn.smm.zy.pojo.zy_user;
 import cn.smm.zy.service.invitationservice;
+import cn.smm.zy.service.zy_typeService;
 import cn.smm.zy.service.zy_userService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -36,6 +38,8 @@ class ZyApplicationTests {
     private cn.smm.zy.service.invitationservice invitationservice;
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
+    @Autowired
+    private cn.smm.zy.service.zy_typeService zy_typeService;
 
     @Test
     void contextLoads() {
@@ -58,8 +62,16 @@ class ZyApplicationTests {
         /*List<zy_invitation> findpage = invitationservice.findpage(1, 2);*/
         /*redisTemplate.opsForValue().set("keyNo","1");
         redisTemplate.opsForValue().set("keyToocount","2");*/
-        System.out.println(redisTemplate.opsForValue().get("keyNo"));
-        System.out.println(redisTemplate.opsForValue().get("keyToocount"));
+        /*System.out.println(redisTemplate.opsForValue().get("keyNo"));*/
+        zy_type byid = zy_typeService.findByid(4);
+        System.out.println(byid);
+
+       /* List<zy_invitation> zy_invitations = invitationservice.getzy_invitations();
+        for (zy_invitation item : zy_invitations){
+            zy_user findbyid = zy_userService.findbyid(item.getItt_createid());
+            item.setCreateInfo(findbyid.getUser_realname());
+            System.out.println("发表人"+item.getCreateInfo());
+        }*/
 
     }
     }

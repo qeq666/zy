@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Title</title>
+    <title>周边发布-信息共享-众游</title>
     <link rel="stylesheet" href="css/layui.css">
     <style>
         .this{

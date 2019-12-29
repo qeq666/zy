@@ -136,8 +136,8 @@
 <script type="text/javascript"
         src="https://webapi.amap.com/maps?v=1.4.15&key=bdc6b4745e57a3b82f107bb5ff53e59f"></script>
 <script type="text/javascript">    //地图初始化时，在地图上添加一个marker标记,鼠标点击marker可弹出自定义的信息窗体
-    var j = "${share.danadw}";
-    var w = "${share.latitude}";
+    var j = "${share.latitude}";
+    var w = "${share.danadw}";
     if(j == null || w == null){
          j = "116.481181";
          w = "39.989792";

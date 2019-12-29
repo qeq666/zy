@@ -2,6 +2,7 @@ package cn.smm.zy.service;
 
 import cn.smm.zy.Dao.zy_typeMapper;
 import cn.smm.zy.pojo.zy_type;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -50,7 +51,23 @@ public class zy_typeService {
      * @return
      */
     public Integer tupdate(zy_type zt){
-        int i = zy_typedao.updateById(zt);
-        return i;
+        QueryWrapper<zy_type> q = new QueryWrapper<>();
+        q.eq("t_id",zt.getT_id());
+        int update = zy_typedao.update(zt, q);
+        return update;
     }
+    public zy_type findByid(Integer id){
+        QueryWrapper<zy_type> q = new QueryWrapper<>();
+        q.eq("t_id",id);
+        zy_type zy_type = zy_typedao.selectOne(q);
+        return zy_type;
+    }
+
+    public Integer del(Integer tid){
+        QueryWrapper<zy_type> q = new QueryWrapper<>();
+        q.eq("t_id",tid);
+        return zy_typedao.delete(q);
+    }
+
+
 }

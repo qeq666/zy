@@ -20,7 +20,7 @@ public class zy_invitation implements Serializable {
             Integer id;
             String itt_title;
             String itt_content;
-            String itt_createtime;
+            Date itt_createtime;
             String itt_createid;
             Integer itt_audittype;
             Integer itt_isdelete;
@@ -29,10 +29,12 @@ public class zy_invitation implements Serializable {
             Integer itt_kind;
             @TableField(exist = false)
             String type;
+            @TableField(exist = false)
+            String createInfo;
             String itt_downurl;
     public zy_invitation(){}
 
-        public zy_invitation(String itt_title, String itt_content, String itt_createtime, String itt_createid, Integer itt_audittype, Integer itt_isdelete, Integer itt_type, String itt_img01,String itt_downurl,Integer itt_kind) {
+        public zy_invitation(String itt_title, String itt_content, Date itt_createtime, String itt_createid, Integer itt_audittype, Integer itt_isdelete, Integer itt_type, String itt_img01,String itt_downurl,Integer itt_kind) {
                 this.itt_title = itt_title;
                 this.itt_content = itt_content;
                 this.itt_createtime = itt_createtime;

@@ -72,15 +72,13 @@
 <form action="upload" class="layui-form" method="post" enctype="multipart/form-data">
     <div class="layui-container" style="padding-top: 20px;margin-left: 17%">
 
-        <div class="layui-btn-row">
-            <div class="layui-col-md6">
-                <label class="layui-form-label ">标题&nbsp;<span style="font-weight: bold">:</span>&nbsp;</label>
-                <div class="layui-input-block">
-                    <input type="text" name="title" id="title" style="width:300px;" placeholder="这里输入标题!" required lay-verify="required" autocomplete="off" class="layui-input"/><span class="layui-breadcrumb"><a
-                                href="">发帖不会使用,下拉一下试试吧!</a></span>
-                </div>
+        <div class="row" >
+            <div class="layui-col-md-9" style="margin-left: 3%">
+                <input type="text" name="title" id="title" style="width:300px;" placeholder="这里输入标题!" required lay-verify="required" autocomplete="off" class="layui-input"/>
             </div>
-            <div class="layui-col-md6">
+        </div>
+        <div class="layui-btn-row">
+            <div class="layui-col-md12" style="margin-left: 13px;margin-top: 3%">
                 <label class="layui-form-label ">缩略图&nbsp;<span style="font-weight: bold">:</span>&nbsp;</label>
                 <div class="layui-input-block">
                     <input  type="file" name="file" id="file" style="width: 190px;display: inline-block;padding-left: 20px">
@@ -88,9 +86,15 @@
             </div>
         </div>
     </div>
-    <div class="layui-container" style="padding-top: 20px">
-        <div class="layui-col-md12">
-            <span class="layui-icon layui-icon-delete" style="color: #009688;font-size: 18px"></span><a href="#">清空内容</a>
+    <div class="layui-container" style="padding-top: 50px;">
+        <div class="layui-col-md6">
+
+            <select id="type" name="type">
+                <option value="0">选择分类</option>
+                <#list types as item_type>
+                    <option value="${item_type.t_id}">${item_type.t_type}</option>
+                </#list>
+            </select>
         </div>
         <div class="layui-col-md12">
             <textarea id="textbox" name="edit" style="width: 100%; height: 400px;"></textarea>

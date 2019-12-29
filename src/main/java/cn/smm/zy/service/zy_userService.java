@@ -52,7 +52,6 @@ public class zy_userService {
     }
     /**
      * 冻结用户
-     * @param zu
      * @return
      */
     public Integer FrozenU(zy_user zy_user ){
@@ -61,6 +60,11 @@ public class zy_userService {
         return i;
     }
 
+    /**
+     * 根据昵称 查询用户信息
+     * @param email
+     * @return
+     */
     public zy_user findbyid(String email){
         QueryWrapper<zy_user> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("user_email",email);
@@ -81,6 +85,14 @@ public class zy_userService {
      */
     public zy_user findByid(Integer byid){
         return zy_userMapper.selectById(byid);
+    }
+
+
+    public String eq(String email){
+        QueryWrapper<zy_user> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_email",email);
+        zy_user zy_user = zy_userMapper.selectOne(queryWrapper);
+        return zy_user.getUser_realname();
     }
 
 }

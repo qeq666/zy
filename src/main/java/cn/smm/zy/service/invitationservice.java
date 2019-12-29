@@ -64,9 +64,8 @@ public class invitationservice {
 
 
     public Integer deleteByid(Integer id) {
-        QueryWrapper<zy_invitation> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(zy_invitation::getId, id);
-        int delete = invitation.delete(queryWrapper);
+
+        int delete = invitation.deleteById(id);
         return delete;
     }
 
@@ -74,6 +73,8 @@ public class invitationservice {
         /*QueryWrapper<zy_invitation> queryWrapper = new QueryWrapper<>();
         queryWrapper.lambda().eq(zy_invitation::getId, id);
         List<zy_invitation> zy_invitations = invitation.selectList(queryWrapper);*/
+        String key = "news";
+        redisTemplate.delete(key);
         zy_invitation zy_invitation = invitation.selectById(id);
         return zy_invitation;
     }
@@ -105,17 +106,6 @@ public class invitationservice {
             s1 = "";
             s2 = "";
         }
-       /* if ("".equals(items.get(0))) {
-            s0 = "";
-        } else if ("".equals(items.get(1))) {
-            s1 = "";
-        } else if ("".equals(items.get(2))) {
-            s2 = "";
-        } else {
-            s0 = items.get(0);
-            s1 = items.get(1);
-            s2 = items.get(2);
-        }*/
         System.out.println();
         String colum = "itt_title";
         QueryWrapper<zy_invitation> tjany = null;/*条件构造器*/
@@ -157,9 +147,9 @@ public class invitationservice {
         PageAndPageNoAndPageCur array = null;
         List<zy_invitation> ittpages = null;
         IPage<zy_invitation> zy_invitationIPage = null;
-       String Pastkey = "pagekey";
-       String keyNo = "pageNo";
-       String Pages = "tolcount";
+        String Pastkey = "pagekey";
+        String keyNo = "pageNo";
+        String Pages = "tolcount";
         redisTemplate.delete(Pastkey);
         List<zy_invitation> keys = (List<zy_invitation>) redisTemplate.opsForValue().get(Pastkey);
         if(keys==null||"".equals(keys)){
@@ -198,6 +188,48 @@ public class invitationservice {
         redisTemplate.delete(key);
         int top = invitation.updateById(zy_invitation);
         return top;
+    }
+
+
+    /**
+     * 条件查询分页
+     * @param pageNo
+     * @param size
+     * @param title
+     * @return
+     */
+    public PageAndPageNoAndPageCur pageQwarList(Integer pageNo, Integer size,String title,Integer type){
+        PageAndPageNoAndPageCur array = null;
+        IPage<zy_invitation> zy_invitationIPage = null;
+        List<zy_invitation> ittpages = null;
+        String Pastkey = "pagekey";
+        String keyNo = "pageNo";
+        String Pages = "tolcount";
+        redisTemplate.delete(Pastkey);
+        List<zy_invitation> keys = (List<zy_invitation>) redisTemplate.opsForValue().get(Pastkey);
+        if(type==null||type==0){
+            type = 0;
+        }
+        if(keys==null||"".equals(keys)){
+            Page<zy_invitation> pages = new Page<>(pageNo,size);
+            QueryWrapper<zy_invitation> waper = new QueryWrapper<>();
+            waper.like("itt_title",title).or().eq("itt_type",type);
+            zy_invitationIPage= invitation.selectPage(pages,waper);
+            List<zy_invitation> records = zy_invitationIPage.getRecords();
+            redisTemplate.opsForValue().set(Pastkey,records);/*查出来放Redis*/
+            ittpages = (List<zy_invitation>) redisTemplate.opsForValue().get(Pastkey);/*放进去再从redis查出来返回出去*/
+            System.out.println("分页数据来自M");
+            redisTemplate.opsForValue().set(keyNo,zy_invitationIPage.getCurrent());
+            redisTemplate.opsForValue().set(Pages,zy_invitationIPage.getPages());
+        }else{
+            System.out.println("分页数据来自R");
+            /*redis有数据*/
+            ittpages = (List<zy_invitation>) redisTemplate.opsForValue().get(Pastkey);/*放进去再从redis查出来返回出去*/
+        }
+        Long getpageNos = (Long) redisTemplate.opsForValue().get(keyNo);
+        Long getPages = (Long) redisTemplate.opsForValue().get(Pages);
+        array = new PageAndPageNoAndPageCur(getpageNos,getPages,ittpages);
+        return array;
     }
 
 

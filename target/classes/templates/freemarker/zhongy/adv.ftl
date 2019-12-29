@@ -58,7 +58,7 @@
                 <td>${advs_item.wl_describe}</td>
                 <td><div class="button-group">
                 <a class="button border-main" href="#add"><span class="icon-edit"></span> 修改</a>
-                <a class="button border-red" href="javascript:void(0)" onclick="return del(1,1)"><span class="icon-trash-o"></span> 删除</a>
+                <a class="button border-red" href="javascript:void(0)" onclick="return del('${advs_item.id}')"><span class="icon-trash-o"></span> 删除</a>
                 </div></td>
             </tr>
           </#list>
@@ -67,9 +67,12 @@
   </table>
 </div>
 <script type="text/javascript">
-function del(id,mid){
+function del(id){
 	if(confirm("您确定要删除吗?")){
-	
+	  $.get("/delByid/"+id,function (data) {
+        alert(data);
+        location.reload();
+      })
 	}
 }
 </script>

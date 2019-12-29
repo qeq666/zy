@@ -89,8 +89,8 @@ public class userController {
             }
             Object addinvitation = invitationservice.addinvitation(
                     new zy_invitation(req.getParameter("title"), req.getParameter("edit"),
-                            ToolUtil.getDate(), create,
-                            0, 0, 5, filePath,downurl,
+                            new Date(), create,
+                            0, 0, Integer.parseInt(req.getParameter("type")), filePath,downurl,
                     1));
             json = new json_N("上传成功", "/projectlist01");
         } catch (Exception e) {

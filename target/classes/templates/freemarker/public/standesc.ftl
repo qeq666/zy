@@ -24,7 +24,7 @@
 
             <#list Notices as item>
                 <div class="row" style="padding-top: 15px">
-                    <span class="layui-badge"><#if item.kind == 2>置顶<#else>最新</#if></span><a href="findByidNotice/${item.id}">${item.title}</a><br>
+                    <span class="layui-badge"><#if item.kind == 2>置顶<#else>最新</#if></span><a href="ggdesc/${item.id}" target="_blank">${item.title}</a><br>
                 </div>
             </#list>
         <#else>

@@ -1,6 +1,7 @@
 package cn.smm.zy.Controller;
 
 import cn.smm.zy.Dao.zy_homepageMapper;
+import cn.smm.zy.Util.PageAndPageNoAndPageCur;
 import cn.smm.zy.Util.PwdEditor;
 import cn.smm.zy.Util.ToolUtil;
 import cn.smm.zy.Util.json_N;
@@ -29,6 +30,7 @@ import cn.smm.zy.service.zy_wheelimgsidService;
  */
 @Controller
 public class adController {
+    private  Integer size = 4;
     @Autowired
     private invitationservice invitationservice;
     @Autowired
@@ -47,6 +49,8 @@ public class adController {
     private loginservice loginservice;
     @Autowired
     private zy_standinnerServiceimpl zy_standinnerServiceimpl;
+    @Autowired
+    private zy_leaveServiceImpl zy_leaveServiceImpl;
     // 项目根路径下的目录  -- SpringBoot static 目录相当于是根路径下（SpringBoot 默认）
     public final static String UPLOAD_PATH_PREFIX = "static/uploadFile/";
     /**
@@ -157,7 +161,8 @@ public class adController {
      */
     @PostMapping("/Rotationchart")
     /*Rotationchart 旋转图标的意思--轮播图*/
-    public String Rotationchart(@RequestParam("file") MultipartFile uploadFile, HttpServletRequest req) {
+    public String Rotationchart(@RequestParam("file") MultipartFile uploadFile, HttpServletRequest req,HttpSession session) {
+        json_N json = null;
         if (uploadFile.isEmpty()) {
             //返回选择文件提示
             return "上传失败，因为文件是空的<a href='Init'>=返回首页</a>";
@@ -194,11 +199,12 @@ public class adController {
             Integer integer = zy_wheelimgsidService.InsertLb(zyw);
             String msg = null;
             if (integer > 0) {
-                msg = "上传成功";
+                json = new json_N("上传成功","advs");
             } else {
-                msg = "上传失败";
+                json = new json_N("点击次数太快了","advs");
             }
-            req.setAttribute("msg", msg);
+            session.setAttribute("msg", json.getMsg());
+            session.setAttribute("view", json.getView());
             return "freemarker/zhongy/Jump";
         } catch (Exception e) {
             e.printStackTrace();
@@ -229,15 +235,23 @@ public class adController {
     /*帖子列表*/
     @RequestMapping("/IttList")
     public Object IttList(HttpServletRequest req, HttpServletResponse Response) {
-        List<zy_invitation> zy_invitations = invitationservice.getzy_invitations();
+        List<zy_type> apls1 = zy_types.apls();
+        Integer pageNo = null;
+        if ("".equals(req.getParameter("pageNo")) || req.getParameter("pageNo") == null) {
+            pageNo = 1;
+        } else {
+            pageNo = Integer.parseInt(req.getParameter("pageNo"));
+        }
+        PageAndPageNoAndPageCur findpage = invitationservice.findpage(pageNo, size);
         List<zy_invitation> items = new ArrayList<zy_invitation>();
-        for (zy_invitation zy : zy_invitations) {
+        for (zy_invitation zy : findpage.getItts()) {
             String apls = type.eqapls(zy.getItt_type());
             zy.setType(apls);
             items.add(zy);
         }
-        req.setAttribute("Itts", zy_invitations);
-
+        req.setAttribute("Itts", items);
+        req.setAttribute("pageNo", pageNo);
+        req.setAttribute("apls1", apls1);
         return "freemarker/zhongy/list";
     }
     /**
@@ -256,12 +270,12 @@ public class adController {
                     json = new json_N("登陆成功", "/dana");
                     break;
                 } else {
-                    json = new json_N("验证码错误或密码错误", "/adlogin");
+                    json = new json_N("验证码错误或密码错误", "/dana");
                     continue;
                 }
             }
         } else {
-            json = new json_N("验证码错误或密码错误", "/adlogin");
+            json = new json_N("验证码错误或密码错误", "/dana");
         }
         session.setAttribute("msg", json.getMsg());
         session.setAttribute("view", json.getView());
@@ -347,7 +361,7 @@ public class adController {
     }
     /*冻结*/
     @RequestMapping("/Frozen/{id}")
-    public String Frozen(@PathVariable("id") Integer id,HttpServletRequest req){
+    public String Frozen(@PathVariable("id") Integer id,HttpServletRequest req,HttpSession session){
         Integer operation = zy_userService.operation(id);
         json_N js = null;
         System.out.println(operation);
@@ -356,13 +370,13 @@ public class adController {
         }else{
             js = new json_N("重新操作一下试试!","/ulists");
         }
-        req.setAttribute("msg", js.getMsg());
-        req.setAttribute("view", js.getView());
+        session.setAttribute("msg", js.getMsg());
+        session.setAttribute("view", js.getView());
         return "freemarker/zhongy/Jump";
     }
     @RequestMapping("/UserFrozen/{email}")
     @ResponseBody
-    public String Fikt(@PathVariable("email") String email){
+    public String Fikt(@PathVariable("email") String email,HttpSession session){
         json_N js = null;
         List<zy_regisger_user> querys = loginservice.Querys();
         zy_regisger_user dong = null;
@@ -387,7 +401,9 @@ public class adController {
                 continue;
             }
         }
-        return json_n.getMsg();
+        session.setAttribute("msg", json_n.getMsg());
+        session.setAttribute("view", json_n.getView());
+        return "freemarker/zhongy/Jump";
     }
 
 
@@ -558,6 +574,125 @@ public class adController {
         session.setAttribute("view", json.getView());
         return "freemarker/zhongy/Jump";
     }
+
+    /**
+     * 删除一个轮播图
+     * @param id
+     * @param session
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/delByid/{id}")
+    public String delByid(@PathVariable("id") Integer id,HttpSession session){
+        String msg = null;
+        Integer integer = zy_wheelimgsidService.delByid(id);
+        if(integer>0){
+            msg = "删除成功";
+        }else{
+            msg = "删除失败";
+        }
+        return msg;
+    }
+
+
+    @RequestMapping("/swchList")
+    public String swchListPageQwr(HttpServletRequest req){
+        System.out.println("分类为:"+Integer.parseInt(req.getParameter("sechtype")));
+        Integer pageNo = null;
+        if ("".equals(req.getParameter("pageNo")) || req.getParameter("pageNo") == null) {
+            pageNo = 1;
+        } else {
+            pageNo = Integer.parseInt(req.getParameter("pageNo"));
+        }
+        PageAndPageNoAndPageCur pageListQwresult = invitationservice.pageQwarList(pageNo, size, req.getParameter("title"),Integer.parseInt(req.getParameter("sechtype")));
+        List<zy_type> apls1 = zy_types.apls();
+
+        List<zy_invitation> items = new ArrayList<zy_invitation>();
+        for (zy_invitation zy : pageListQwresult.getItts()) {
+            String apls = type.eqapls(zy.getItt_type());
+            zy.setType(apls);
+            items.add(zy);
+        }
+        req.setAttribute("Itts", items);
+        req.setAttribute("pageNo", pageNo);
+        req.setAttribute("apls1", apls1);
+        return "freemarker/zhongy/list";
+    }
+
+    /**
+     * 添加一个分类
+     * @param req
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/addType")
+    public String addType(HttpServletRequest req,HttpSession session){
+        zy_type zyt = new zy_type(req.getParameter("title"),req.getParameter("s_desc"));
+        Integer integer = type.insertType(zyt);
+        json_N json = null;
+        if(integer>0){
+            json = new json_N("添加成功","/cate");
+        }else{
+            json = new json_N("再试一次吧","/cate");
+        }
+        session.setAttribute("msg", json.getMsg());
+        session.setAttribute("view", json.getView());
+        return "freemarker/zhongy/Jump";
+    }
+
+    /**
+     * 删除一个分类
+     * @param tid
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping("/delType/{tid}")
+    public String delType(@PathVariable("tid") Integer tid){
+        Integer del = type.del(tid);
+        String msg = null;
+        if(del>0){
+            msg = "删除成功";
+        }else{
+            msg = "删除失败";
+        }
+        return msg;
+    }
+
+    @RequestMapping("/tinfo/{id}")
+    public String jumptinfo(@PathVariable("id") Integer id,HttpServletRequest req){
+        zy_type byid = type.findByid(id);
+        System.out.println(byid);
+        req.setAttribute("ts",byid);
+        return "freemarker/zhongy/typeinfo";
+    }
+
+    @RequestMapping("/updatrType")
+    public String updatType(HttpServletRequest req,HttpSession session){
+        zy_type result = type.findByid(Integer.parseInt(req.getParameter("tid")));
+        result.setT_type(req.getParameter("title"));
+        result.setT_back(req.getParameter("desc"));
+        Integer tupdate = type.tupdate(result);
+        json_N json = null;
+        if(tupdate>0){
+            json = new json_N("更新成功","/cate");
+        }else{
+            json = new json_N("点击的有点快了歇一会","/cate");
+        }
+        session.setAttribute("msg", json.getMsg());
+        session.setAttribute("view", json.getView());
+        return "freemarker/zhongy/Jump";
+    }
+
+    @RequestMapping("/lyfkList")
+    public String JumpLYFKS(HttpSession session){
+        List<zy_leave> findall = zy_leaveServiceImpl.findall();
+        session.setAttribute("fkmsgs",findall);
+        return "freemarker/zhongy/lyfks";
+    }
+
+
+
+
 
 
 

@@ -50,21 +50,22 @@
 							<div class="form_text_ipt">
 								<input id="name" name="name" type="text" onblur="chekuser()" placeholder="手机号/邮箱">
 							</div>
-							<div class="ececk_warning"><span>手机号/邮箱不能为空</span></div>
+							<div class="ececk_warning"><span>&nbsp;</span></div>
 							<div class="form_text_ipt">
 								<input id="pwd" name="pwd" type="password" placeholder="密码">
 							</div>
-							<div class="ececk_warning"><span>密码不能为空</span></div>
+							<div class="ececk_warning"><span>&nbsp;</span></div>
 							<div class="form_text_ipt">
 								<input name="repassword" type="password" placeholder="重复密码">
 							</div>
-							<div class="ececk_warning"><span>密码不能为空</span></div>
+							<div class="ececk_warning"><span>&nbsp;</span></div>
+							<#--<img id="cpcode" name="cpcode" src="http://bbs.free-http.svipss.top/api/captcha" alt=" " style="padding-left: 30px;padding-top: 20px">-->
 							<img id="cpcode" name="cpcode" src="http://127.0.0.1/api/captcha" alt=" " style="padding-left: 30px;padding-top: 20px">
 							<div class="form_text_ipt">
 								<input id="code" name="code" type="text" placeholder="验证码" >
 							</div>
 
-							<div class="ececk_warning"><span>验证码不能为空</span></div>
+							<div class="ececk_warning"><span>&nbsp;</span></div>
 							<div style="padding-left: 30px;padding-bottom: 20px;padding-top: 20px">
 								<select id="s_province" name="s_province" style="height: 35px"></select>
 								<select id="s_city" name="s_city" style="height: 35px"></select>

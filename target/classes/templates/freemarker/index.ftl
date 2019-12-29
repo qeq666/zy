@@ -57,11 +57,8 @@
             <li class="layui-nav-item"><a href="projectlist01">项目展示</a></li>
             <li class="layui-nav-item"><a href="#">申请扶助</a></li>
             <li class="layui-nav-item"><a href="/zydwa" target="_blank">寻找周边</a></li>
-            <li class="layui-nav-item"><a href="#">精品投稿</a></li>
-            <li class="layui-nav-item"><a href="#">产品推广</a></li>
-            <li class="layui-nav-item"><a href="#">留言建议</a></li>
+            <li class="layui-nav-item"><a href="lyfk" target="_blank">留言建议</a></li>
             <li class="layui-nav-item"><a href="Gywm">关于我们</a></li>
-            <li class="layui-nav-item"><a href="Music.html">旗下网站</a></li>
             <!--下面是带二级菜单的_大拿因为某种原因不使用-->
             <!--<li class="layui-nav-item"><a href="#">首页</a></li>
             <li class="layui-nav-item"><a href="#">项目展示</a></li>
@@ -82,11 +79,11 @@
     <div class="layui-col-md12" style="width:100%;height:270px;margin-top: 20px">
         <!--<h1 style="text-align: center">这是轮播图</h1>-->
         <div class="layui-carousel" id="test1">
-                <div carousel-item>
-                    <div><img src="img/lbu01.png" alt="这是一个轮播图阿" style="width: 100%;height: 100%;"></div>
-                    <div><img src="img/lbu02.jpg" alt="这是一个轮播图阿" style="width: 100%;height: 100%;"></div>
-                    <div><img src="img/lbu03.jpg" alt="这是一个轮播图阿" style="width: 100%;height: 100%;"></div>
-                </div>
+            <div carousel-item>
+                <#list imgs as item>
+                    <div><img src="${item.wl_img}" alt="${item.wl_describe}" style="width: 100%;height: 100%;"></div>
+                </#list>
+            </div>
         </div>
     <!--推荐分类-->
     <div class="layui-col-md12" style="width:100%;height:150px
@@ -149,10 +146,10 @@
                         <a href="/gname/${item.id}" target="_blank" class="layui-edge-right" style="color: #009688">${item.itt_title!'没有内容'}</a>
                         <#if item.itt_kind == 2><span class="layui-badge" style="margin-left: 3%">置顶</span></#if>
                     </div>
-                    <div class="layui-col-md5" style="padding-top: 5px">
-                        <span class="layui-icon layui-icon-username" style="color: #009688"></span>作者&nbsp;<span style="font-weight: bold">:</span>&nbsp;<a href="#">匿名</a>
+                    <div class="layui-col-md6" style="padding-top: 5px">
+                        <span class="layui-icon layui-icon-username" style="color: #009688"></span>作者&nbsp;<span style="font-weight: bold">:</span>&nbsp;<a href="#">${item.itt_createid!'佚名'}</a>
                         &nbsp;&nbsp;&nbsp;<span class="layui-icon layui-icon-notice" style="color: #009688"></span>时间 <span style="font-weight: bold">:</span>&nbsp;<a
-                            href="#">${item.itt_createtime!'没有内容'}</a>
+                            href="#">${item.itt_createtime?string("yyyy-MM-dd")!'没有内容'}</a>
                         &nbsp;<span class="layui-icon layui-icon-rate" style="color: #009688"></span>&nbsp;<a
                                 href="#">${item.type!'没有内容'}</a>
                     </div>

@@ -25,7 +25,7 @@
     <li><a href="/pass" target="right"><span class="icon-caret-right"></span>修改密码</a></li>
 
     <li><a href="/advs" target="right"><span class="icon-caret-right"></span>推广信息(首页轮播</a></li>
-    <li><a href="#" target="right" title="留言删除,留言筛选"><span class="icon-caret-right"></span>留言管理(维护</a></li>
+    <li><a href="/lyfkList" target="right" title="留言删除,留言筛选"><span class="icon-caret-right"></span>留言管理(维护</a></li>
   </ul>
   <h2><span class="icon-pencil-square-o"></span>公告管理</h2>
   <ul>
