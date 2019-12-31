@@ -200,9 +200,15 @@ public class JumpController {
         List<zy_invitation> zy_invitations = invitationservice.getzy_invitations();
         json_N js = null;
         for (zy_invitation zys : zy_invitations) {
-            System.out.println(id + "TTTT" + zys.getId() + "值");
             if (id.equals(zys.getId()) || id == zys.getId()) {
                 js = new json_N("我要转一圈", "/gnameOne");
+                System.out.println("旧热度"+zys.getItt_Degreeofheat());
+                System.out.println("鑫热度"+zys.getItt_Degreeofheat()+1);
+                zys.setItt_Degreeofheat(zys.getItt_Degreeofheat()+1);
+                Integer reduadd = invitationservice.addDegree(zys);
+                if(reduadd>0){
+                    System.out.println("热度+1"+zys.getItt_title()+"的热度为:"+zys.getItt_Degreeofheat());
+                }
                 session.setAttribute("gnamecontent", zys);
                 break;
             } else {

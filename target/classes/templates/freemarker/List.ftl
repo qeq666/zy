@@ -65,7 +65,7 @@
                                 <p style="font-weight: bold">${zy_invitations_item.itt_title}</p>
                                 <img src="${zy_invitations_item.itt_img01}" style="width: 100px;height: 100px;cursor:pointer"" alt="" onclick="location.href='/gname/${zy_invitations_item.id}'">
                                 <p style="font-size: 10px">状态:不可下载</p>
-                                <p style="font-size: 10px">${zy_invitations_item.itt_createtime} &emsp;上传</p>
+                                <p style="font-size: 10px">${zy_invitations_item.itt_createtime?string("yyyy-MM-dd")} &emsp;上传</p>
                                 <p style="font-size: 12px">热度 &emsp;10</p>
                                 <p style="margin-left: 30%">作者: <a href="#">章大拿</a></p>
                             </div>

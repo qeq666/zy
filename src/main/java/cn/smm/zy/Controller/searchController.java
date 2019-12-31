@@ -5,6 +5,7 @@ import cn.smm.zy.Util.json_N;
 import cn.smm.zy.pojo.zy_homepage;
 import cn.smm.zy.pojo.zy_invitation;
 import cn.smm.zy.pojo.zy_type;
+import cn.smm.zy.pojo.zy_wheelimgsid;
 import cn.smm.zy.service.invitationservice;
 import cn.smm.zy.service.zy_homepageService;
 import cn.smm.zy.service.zy_typeService;
@@ -26,7 +27,8 @@ import java.util.List;
 
 @Controller
 public class searchController {
-
+    @Autowired
+    private cn.smm.zy.service.zy_wheelimgsidService zy_wheelimgsidService;
     @Autowired
     private cn.smm.zy.service.invitationservice invitationservice;
     @Autowired
@@ -36,6 +38,7 @@ public class searchController {
 
     @RequestMapping(value = "search", method = RequestMethod.POST)
     public String search(HttpServletRequest req, HttpSession session) {
+        List<zy_wheelimgsid> zy_wheelimgsids = zy_wheelimgsidService.QyeryList();
         json_N js = null;
         List<zy_invitation> items = new ArrayList<zy_invitation>();
         String title = req.getParameter("search_title");
@@ -70,6 +73,7 @@ public class searchController {
         List<zy_type> apls = type.apls();
         req.setAttribute("itts", items);
         req.setAttribute("apls", apls);
+        req.setAttribute("imgs", zy_wheelimgsids);
         session.setAttribute("msg",js.getMsg());
         session.setAttribute("view",js.getView());
         return "freemarker/index";

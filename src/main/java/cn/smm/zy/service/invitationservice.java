@@ -233,6 +233,19 @@ public class invitationservice {
     }
 
 
+    /**
+     * 更新热度
+     * @param zy_invitation
+     * @return
+     */
+    public Integer addDegree(zy_invitation zy_invitation){
+        String key = "news";
+        redisTemplate.delete(key);
+        int result = invitation.updateById(zy_invitation);
+        return result;
+    }
+
+
 
 
 

@@ -25,7 +25,7 @@
     </div>
 <!--    标题-->
     <div class="layui-row" style="padding-top: 50px;padding-left: 30%"><h2 class="">${gnamecontent.itt_title!'重试'}</h2></div>
-    <div class="layui-row" style="padding-top: 10px;padding-left: 20%"> <span class="layui-icon layui-icon-user" style="color:#009688"></span>&ensp;大拿 &ensp;<span class="layui-icon layui-icon-date" style="color:#009688"></span>&ensp;${gnamecontent.itt_createtime!'重试'}  &ensp;<span style="color:#009688" class="layui-icon layui-icon-app"></span>&ensp;${gnamecontent.type!'其他'}</div>
+    <div class="layui-row" style="padding-top: 10px;padding-left: 20%"> <span class="layui-icon layui-icon-user" style="color:#009688"></span>&ensp;大拿 &ensp;<span class="layui-icon layui-icon-date" style="color:#009688"></span>&ensp;${gnamecontent.itt_createtime?string("yyyy-MM-dd")!'重试'}  &ensp;<span style="color:#009688" class="layui-icon layui-icon-app"></span>&ensp;${gnamecontent.type!'其他'}</div>
     <div class="layui-row" style="padding-top: 10px;"><hr class="layui-bg-blue"></div>
     <div class="layui-row" style="padding-top: 10px;">
         ${gnamecontent.itt_content!'重试'}

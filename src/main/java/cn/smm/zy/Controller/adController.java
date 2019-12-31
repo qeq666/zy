@@ -261,9 +261,11 @@ public class adController {
      */
     @RequestMapping("/loginck")
     public String adLogin(HttpServletRequest req,HttpSession session) {
+        System.out.println(req.getParameter("name")+req.getParameter("password"));
         json_N json = null;
+        System.out.println("验证码"+session.getAttribute("simpleCaptcha"));
         List<zy_admin> zy_admins = zy_adminService.QyeryList();
-        if (req.getSession().getAttribute("simpleCaptcha").equals(req.getParameter("code"))) {
+        if (session.getAttribute("simpleCaptcha").equals(req.getParameter("code"))) {
             for (zy_admin zya : zy_admins) {/*md5加密*/
                 if (req.getParameter("name").equals(zya.getZuid()) && req.getParameter("password").equals(zya.getZpwd())) {
                     req.getSession().setAttribute("admin", zya);

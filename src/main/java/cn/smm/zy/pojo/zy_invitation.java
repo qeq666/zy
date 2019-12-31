@@ -32,15 +32,17 @@ public class zy_invitation implements Serializable {
             @TableField(exist = false)
             String createInfo;
             String itt_downurl;
+            Integer itt_Degreeofheat;
     public zy_invitation(){}
 
-        public zy_invitation(String itt_title, String itt_content, Date itt_createtime, String itt_createid, Integer itt_audittype, Integer itt_isdelete, Integer itt_type, String itt_img01,String itt_downurl,Integer itt_kind) {
+        public zy_invitation(String itt_title, String itt_content, Date itt_createtime, String itt_createid, Integer itt_audittype, Integer itt_isdelete, Integer itt_type, String itt_img01,String itt_downurl,Integer itt_kind,Integer itt_Degreeofheat) {
                 this.itt_title = itt_title;
                 this.itt_content = itt_content;
                 this.itt_createtime = itt_createtime;
                 this.itt_createid = itt_createid;
                 this.itt_audittype = itt_audittype;
                 this.itt_isdelete = itt_isdelete;
+                this.itt_Degreeofheat = itt_Degreeofheat;
                 this.itt_type = itt_type;
                 this.itt_img01 = itt_img01;
                 this.itt_downurl = itt_downurl;

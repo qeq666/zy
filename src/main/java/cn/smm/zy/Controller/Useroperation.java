@@ -61,7 +61,7 @@ public class Useroperation {
                             new zy_invitation(req.getParameter("title"), req.getParameter("edit"),
                             new Date(), create,
                             0, 0, 0, filePath + fileName.toString(),null,1
-                    ));
+                    ,0));
 
                     return "上传成功，"+addinvitation+".<a href='sendf'>继续发帖</a><a href='index'>=返回首页</a>";
                 } catch (Exception e) {

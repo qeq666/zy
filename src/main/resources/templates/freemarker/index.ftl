@@ -12,14 +12,31 @@
         .btnbutto a{
             margin-left: 3%;
         }
+        .ul_li li{
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 3%;
+            font-weight: bold;
+
+
+        }
+        ol li a:hover{
+            color: red;
+            border-bottom:4px darkorange solid ;
+
+        }
+        .fix{
+            margin-top: 3%;
+        }
+        ol li a:link{
+            color: rgb(66,154,181);
+        }
     </style>
 </head>
-<body>
-<div class="layui-container">
-    <!--登录注册-->
-    <div class="layui-col-md12" style="z-index: 1">
-        <div class="layui-col-md4">
-            <span class="btnbutto" lay-separator="|">
+<body style="background-color: rgba(198,243,255,0.4)">
+<!--登录注册-->
+<div style="background-color: #697a8a;width:100%;height: 37px;">
+     <span class="btnbutto" style="position: relative;margin-left: 66%;padding-top: 3%;top: 6px;" lay-separator="|">
                 <#if Session["uid"]?exists>
                     <a href="OnData">欢迎您${Session.uid!'登陆成功'}</a>
                     <a href="OnData">个人资料</a>
@@ -30,11 +47,20 @@
                     <a href="">找回</a>
                 </#if>
             </span>
-        </div>
-    </div>
+</div>
+    <ol class="ul_li fix" style="display: none;height: 38px;;width: 100%;position: fixed;top: 0px" >
+        <li style="padding-left: 16%"><a href="#" style="position: relative;top: 10px;"">首页</a></li>
+        <li><a href="#" style="position: relative;top: 10px;">项目展示</a></li>
+        <li><a href="#" style="position: relative;top: 10px;">寻找周边</a></li>
+        <li><a href="#" style="position: relative;top: 10px;">产品推广</a></li>
+        <li><a href="#" style="position: relative;top: 10px;">留言建议</a></li>
+        <li><a href="#" style="position: relative;top: 10px;">关于我们</a></li>
+    </ol>
+
+<div class="layui-container">
     <!--搜索start-->
     <form action="/search"  method="post" class="layui-form layui-form-pane">
-        <div class="layui-row" style="float: right;width: 350px;">
+        <div class="layui-row" style="float: right;width: 350px;padding-top: 4%">
                 <div class="layui-col-md4">
                     <div class="layui-form-item" pane style="width:240px;">
                         <div class="layui-form-label">思考一下</div>
@@ -51,9 +77,9 @@
 
     </form>
     <!--搜索stop-->
-    <div class="layui-col-md12">
-        <ul class="layui-nav layui-bg-green" lay-filter="">
-            <li class="layui-nav-item"><a href="#">首页</a></li>
+    <div class="layui-col-md8" style="padding-top: 25px;"><#--29-->
+        <ul class="layui-nav layui-bg-green" lay-filter="" >
+            <li class="layui-nav-item" style="margin-left: 20px"><a href="#">首页</a></li>
             <li class="layui-nav-item"><a href="projectlist01">项目展示</a></li>
             <li class="layui-nav-item"><a href="#">申请扶助</a></li>
             <li class="layui-nav-item"><a href="/zydwa" target="_blank">寻找周边</a></li>
@@ -197,6 +223,7 @@
 </div>
 <#--<script src="js/layui.js"></script>-->
 <script src="https://layui.hcwl520.com.cn/layui-v2.5.4/layui.js"></script>
+<script src="js/jquery-1.8.0.min.js"></script>
 <script>
     layui.use(['carousel','layer'], function(){
         var element = layui.element,carousel=layui.carousel,layer=layui.layer;
@@ -216,6 +243,18 @@
     function Login() {
         layer.msg('登录你个头!');
     }
+    $(window).scroll(function(){
+        var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+        if(scrollTop>0){
+            console.log("显示")
+            /*top*/
+            $(" ol").css({"display":"block","position":"fixed","z-index":"999","top":"-57px","background-color":"rgb(66,154,181)"})
+        }
+        if(scrollTop==0){
+            console.log("隐藏")
+            $(" ol").css({"display":"none","position":"fixed","z-index":"999","top":"0px","background-color":"transparent"})
+        }
+    })
 </script>
 </div>
 </body>
