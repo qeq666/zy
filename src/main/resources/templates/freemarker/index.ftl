@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>${idxinfo.home_title}</title>
     <link rel="stylesheet" href="css/layui.css"/>
+    <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
     <style>
         *{
             margin: 0;

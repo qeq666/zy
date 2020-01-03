@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>众游项目展示</title>
     <link rel="stylesheet" href="../css/layui.css" media="all">
+    <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
     <style>
         a{ text-decoration:none}
         #n{margin:10px auto; width:920px; border:1px solid #CCC;font-size:12px; line-height:30px;}

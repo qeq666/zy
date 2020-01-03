@@ -6,6 +6,7 @@
     <title>服务器被外星人偷走了</title>
     <meta name="viewpoint" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/500.css" />
+    <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
     <script src="js/jquery-1.8.0.min.js"></script>
 </head>
 <body>

@@ -86,6 +86,18 @@ public class loginservice {
         return zy_regisger_user;
     }
 
+    /**
+     * Token登录
+     * @param rgt_GiteeId
+     * @return
+     */
+    public zy_regisger_user tokenLogin(String rgt_GiteeId){
+        QueryWrapper<zy_regisger_user> qw =new QueryWrapper<zy_regisger_user>();
+        qw.eq("rgt_GiteeId",rgt_GiteeId);
+        zy_regisger_user zy_regisger_user = lm.selectOne(qw);
+        return zy_regisger_user;
+    }
+
 
 
 

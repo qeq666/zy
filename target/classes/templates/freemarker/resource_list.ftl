@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>项目列表-众游</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
     <style>
         *{
             padding: 0;

@@ -2,6 +2,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="refresh" content="1;url='${view!'EmailReg'}';">
+    <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
     <title>加载中,稍等</title>
     <div id="circle"></div>
     <div id="circletext"></div>

@@ -13,6 +13,7 @@
     <meta name="copyright" content="js代码(www.zyw944.cn)" />
     <script type="text/javascript" src="js/404.js"></script>
     <link rel="stylesheet" href="css/404.css" />
+    <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
 </head>
 
 <body>

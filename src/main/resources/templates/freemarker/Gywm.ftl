@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>众游网-共享-关于我们</title>
     <link rel="stylesheet" href="css/layui.css"/>
+    <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
     <style>
         .layui-tab-title li{
             display: block;

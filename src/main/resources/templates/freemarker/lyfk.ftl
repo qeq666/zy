@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>众游-有你的信息我们会做得更好</title>
     <link rel="stylesheet" href="css/layui.css">
+    <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
     <style>
         *{
             margin: 0;
@@ -48,11 +49,11 @@
 <div style="margin-top: 1%;margin-left: 24%">
     <table class="layui-table" style="width: 50%;">
         <colgroup>
-            <col width="60">
+            <col width="200">
             <col width="400">
             <col width="200">
             <col width="170">
-            <col width="240">
+            <col width="200">
         </colgroup>
         <thead>
         <tr>

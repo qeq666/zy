@@ -8,6 +8,7 @@
     <title>登录</title>  
     <link rel="stylesheet" href="css/pintuer.css">
     <link rel="stylesheet" href="css/admin.css">
+    <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
     <script src="js/jquery.js"></script>
     <script src="js/pintuer.js"></script>  
 </head>
@@ -45,7 +46,14 @@
                 </div>
                 <div style="padding:30px;"><input type="submit" class="button button-block bg-main text-big input-big" value="登录"></div>
             </div>
-            </form>          
+            </form>
+            <div class="layui-container">
+                <div class="layui-row">
+                    <div class="layui-col-md4">
+                        <div style="margin-left: 8%">其它登录方式<img src="img/dsf.ico" style="margin-left: 42%;width: 32px;height: 32px;" alt=""><a href="https://gitee.com/oauth/authorize?client_id=4b53e55ddbbe31027ed50a2ea8facef64e73ac6e14d8a54fd864a6a9c139909f&redirect_uri=http%3A%2F%2F127.0.0.1%3A80%2Fht&response_type=code">码云登录</a></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

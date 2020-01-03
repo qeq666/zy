@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>周边发布-信息共享-众游</title>
     <link rel="stylesheet" href="css/layui.css">
+    <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
     <style>
         .this{
             background-color: rgba(100,119,136,0.5);border-radius: 5px;border:  silver 1px solid

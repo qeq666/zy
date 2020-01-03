@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel='icon' href="img/favicon.ico" type='image/x-ico' />
 	<style>
 		body{ background:#EEEEEE;margin:0; padding:0; font-family:"微软雅黑", Arial, Helvetica, sans-serif; }
 
@@ -46,13 +47,16 @@
 							注册
 						</div>
 						<form action="/register" method="post">
-							
+							<input type="hidden" value="${gie.access_token}" name="rgt_gitee_acctoken" id="rgt_gitee_acctoken"/>
+							<input type="hidden" value="${gie.refresh_token}" name="rgt_refs_token" id="rgt_refs_token"/>
+							<input type="hidden" value="${gie.avatar_url}" name="avatar_url" id="avatar_url"/>
+							<input type="text" style="display: none" value="${gie.id}" name="giteeid" id="giteeid"/>
 							<div class="form_text_ipt">
-								<input id="name" name="name" type="text" onblur="chekuser()" placeholder="手机号/邮箱">
+								<input id="name" name="name" value="${gie.login}" type="text" onblur="chekuser()" placeholder="手机号/邮箱">
 							</div>
 							<div class="ececk_warning"><span>&nbsp;</span></div>
 							<div class="form_text_ipt">
-								<input id="pwd" name="pwd" type="password" placeholder="密码">
+								<input id="pwd" name="pwd"  type="password" placeholder="密码">
 							</div>
 							<div class="ececk_warning"><span>&nbsp;</span></div>
 							<div class="form_text_ipt">
@@ -85,9 +89,7 @@
 								<span>其它登录方式</span>
 							</div>
 							<div class="right other_right">
-								<a href="#"><i class="fa fa-qq fa-2x"></i></a>
-								<a href="#"><i class="fa fa-weixin fa-2x"></i></a>
-								<a href="#"><i class="fa fa-weibo fa-2x"></i></a>
+								<img src="img/dsf.ico" style="width: 32px;height: 32px;" alt=""><a href="https://gitee.com/oauth/authorize?client_id=290eb747d1af6a17ddf612baabf3d9868a820e27244ec50d7c09d6210c08b82a&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fht&response_type=code">码云登录</a>
 							</div>
 						</div>
 					</div>

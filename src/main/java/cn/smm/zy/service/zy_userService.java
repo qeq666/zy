@@ -95,4 +95,14 @@ public class zy_userService {
         return zy_user.getUser_realname();
     }
 
+    /**
+     * 插入认证用户
+     * @param zy_user
+     * @return
+     */
+    public Integer insertuser(zy_user zy_user){
+        int insert = zy_userMapper.insert(zy_user);
+        return insert;
+    }
+
 }

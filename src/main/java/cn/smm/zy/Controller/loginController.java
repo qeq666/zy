@@ -3,7 +3,9 @@ package cn.smm.zy.Controller;
 import cn.smm.zy.Dao.LoginMapper;
 import cn.smm.zy.Util.json_N;
 import cn.smm.zy.pojo.zy_regisger_user;
+import cn.smm.zy.pojo.zy_user;
 import cn.smm.zy.service.loginservice;
+import cn.smm.zy.service.zy_userService;
 import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,6 +31,8 @@ public class loginController {
 
     @Autowired
     private loginservice loginservice;
+    @Autowired
+    private cn.smm.zy.service.zy_userService zy_userService;
 
     /**
      *
@@ -56,10 +60,31 @@ public class loginController {
                 str.append(req.getParameter("s_county"));
                 Date d= new Date();
                 String defadate = sdf.format(d);
-                zy_regisger_user zy = new zy_regisger_user(uname,upwd,str.toString(),"0",defadate,null);
+                String rgt_gitee_acctoken = req.getParameter("rgt_gitee_acctoken");
+                String giteeid = req.getParameter("giteeid");
+                String rgt_refs_token = req.getParameter("rgt_refs_token");
+                String avatar_url = req.getParameter("avatar_url");
+                if(rgt_gitee_acctoken==null||"".equals(rgt_gitee_acctoken)){
+                    rgt_gitee_acctoken="";
+                }
+                if(rgt_refs_token==null||"".equals(rgt_refs_token)){
+                    rgt_refs_token = "";
+                }
+                if(giteeid==null||"".equals(giteeid)){
+                    giteeid = "";
+                }
+                if(avatar_url==null||"".equals(avatar_url)){
+                    avatar_url = "";
+                }
+                System.out.println("注册的时候的token"+rgt_refs_token+"reftoken"+rgt_gitee_acctoken+"该用户关联的id"+Integer.parseInt(giteeid));
+                zy_regisger_user zy = new zy_regisger_user(uname,upwd,str.toString(),"0",defadate,null,rgt_gitee_acctoken,rgt_refs_token,giteeid);
+                zy_user user = new zy_user(uname,uname,0,"0","0",avatar_url,18,str.toString(),"他很懒什么也没留下","男");
+                zy_userService.insertuser(user);
                 boolean registerzy = loginservice.registerzy(zy);
                 if (registerzy){
-                    js = new json_N("注册成功:200","/index");
+                    zy_regisger_user zy_regisger_user = loginservice.zyLogin(uname,upwd);
+                    session.setAttribute("uid",zy_regisger_user.getRgt_email());
+                    js = new json_N("注册成功","/index");
                 }else{
                     js = new json_N("注册失败:500!","/index");
                 }

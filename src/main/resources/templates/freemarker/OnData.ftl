@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>设置-个人中心</title>
     <link rel="stylesheet" href="../css/layui.css">
+    <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
 </head>
 <body style="background-color: #F7F3F7">
     <div class="layui-main">
@@ -12,14 +13,14 @@
             <div class="layui-row">
                 <div class="layui-col-md7" >
                     <ul class="layui-nav" lay-filter="">
-                        <li class="layui-nav-item layui-this"><a href="index">首页</a></li>
-                        <li class="layui-nav-item "><a href="">在项目展示</a></li>
+                        <li class="layui-nav-item layui-this"><a href="/index">首页</a></li>
                         <li class="layui-nav-item"><a href="">众游众源</a></li>
                         <li class="layui-nav-item">
                             <a href="javascript:;">在线工具</a>
                             <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                                <dd><a href="">查询病毒</a></dd>
-                                <dd><a href="">上传文件</a></dd>
+                                <dd><a href="https://s.tencent.com/">查询病毒</a></dd>
+                                <dd><a href="https://imgchr.com/">上传文件</a></dd>
+                                <dd><a href="http://www.kjson.com/jsonparser/">Json在线转换</a></dd>
                             </dl>
                         </li>
                         <li class="layui-nav-item"><a href="">社区</a></li>

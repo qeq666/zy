@@ -7,6 +7,7 @@
     <script type='text/javascript' src='plugins/textboxio/textboxio.js'></script>
     <link rel="stylesheet" type="text/css" href="plugins/example.css" />
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+      <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
 
     <script>
       /*

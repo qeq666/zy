@@ -57,6 +57,7 @@ public class JumpController {
 
     @RequestMapping("/index")
     public String index(HttpServletRequest req, HttpSession session) {
+        System.out.println("用户Gitee授权了");
         List<zy_wheelimgsid> zy_wheelimgsids = zy_wheelimgsidService.QyeryList();
         List<zy_invitation> zy_invitations = invitationservice.getzy_invitations();
         List<zy_invitation> items = new ArrayList<zy_invitation>();
@@ -198,18 +199,20 @@ public class JumpController {
     @RequestMapping("/gname/{id}")
     public String gname(HttpServletRequest req, @PathVariable("id") Integer id, HttpSession session) {
         List<zy_invitation> zy_invitations = invitationservice.getzy_invitations();
+        /*zy_invitation 存放最热消息*/
+        List<zy_invitation> hottest = new ArrayList<zy_invitation>();
         json_N js = null;
         for (zy_invitation zys : zy_invitations) {
             if (id.equals(zys.getId()) || id == zys.getId()) {
                 js = new json_N("我要转一圈", "/gnameOne");
-                System.out.println("旧热度"+zys.getItt_Degreeofheat());
-                System.out.println("鑫热度"+zys.getItt_Degreeofheat()+1);
                 zys.setItt_Degreeofheat(zys.getItt_Degreeofheat()+1);
+                hottest = invitationservice.findHottest(zys.getItt_type());
                 Integer reduadd = invitationservice.addDegree(zys);
                 if(reduadd>0){
                     System.out.println("热度+1"+zys.getItt_title()+"的热度为:"+zys.getItt_Degreeofheat());
                 }
                 session.setAttribute("gnamecontent", zys);
+                session.setAttribute("hottest", hottest);
                 break;
             } else {
                 js = new json_N("查询失败,跳转", "/index");

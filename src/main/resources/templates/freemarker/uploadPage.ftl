@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
 </head>
 <body>
 

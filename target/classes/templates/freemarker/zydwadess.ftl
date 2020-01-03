@@ -7,6 +7,7 @@
     <title>众游-信息共享-发布-周边搜索</title>
     <link rel="stylesheet" href="css/layui.css">
     <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
+    <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
     <style>
         html, body, #container {
             height: 100%;

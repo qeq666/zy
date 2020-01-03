@@ -245,6 +245,26 @@ public class invitationservice {
         return result;
     }
 
+    /**
+     * 根据type  查询该类型最多的数据为用户推荐
+     * @param typeid
+     * @return
+     */
+    public List<zy_invitation> findHottest(Integer typeid){
+        String Hottest = "Hottest";
+        List<zy_invitation> result = (List<zy_invitation>) redisTemplate.opsForValue().get(Hottest);
+        if(result==null||"".equals(result)){
+            QueryWrapper<zy_invitation> ittqw = new QueryWrapper<zy_invitation>();
+            ittqw.eq("itt_type",typeid).or().orderByDesc("itt_Degreeofheat");
+            List<zy_invitation> zy_invitations = invitation.selectList(ittqw);
+            redisTemplate.opsForValue().set(Hottest,zy_invitations);
+            result = (List<zy_invitation>) redisTemplate.opsForValue().get(Hottest);
+        }else{
+            result = (List<zy_invitation>) redisTemplate.opsForValue().get(Hottest);
+        }
+        return result;
+    }
+
 
 
 

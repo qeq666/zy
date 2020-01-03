@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>公告详情</title>
     <link rel="stylesheet" href="css/layui.css">
+    <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
 </head>
 <body>
 <div class="layui-main" style="padding-top: 12%;padding-left: 18%;">

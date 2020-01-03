@@ -4,30 +4,47 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="../css/layui.css"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .ul_li li{
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 8%;
+            font-weight: bold;
+
+
+        }
+        ol li a:hover{
+            color: red;
+            border-bottom:4px darkorange solid ;
+
+        }
+        .fix{
+            margin-top: 3%;
+        }
+        ol li a:link{
+            color: rgb(66,154,181);
+        }
+    </style>
 </head>
 <body>
-<div class="layui-container">
-    <div class="layui-col-md12">
-        <ul class="layui-nav " style="background-color: rgba(0,150,140,0.5);text-align: center"  lay-filter="">
-            <li class="layui-nav-item"><a href="index" target="_blank">首页</a></li>
-            <li class="layui-nav-item"><a href="projectlist01">项目展示</a></li>
-            <li class="layui-nav-item"><a href="#">申请扶助</a></li>
-            <li class="layui-nav-item"><a href="/zydwa" target="_blank">寻找周边</a></li>
-            <li class="layui-nav-item"><a href="#">精品投稿</a></li>
-            <li class="layui-nav-item"><a href="#">产品推广</a></li>
-            <li class="layui-nav-item"><a href="#">留言建议</a></li>
-            <li class="layui-nav-item"><a href="Gywm">关于我们</a></li>
-            <!--<li class="layui-nav-item">
-                <a href="javascript:;">更多</a>
-                &lt;!&ndash;二级菜单&ndash;&gt;
-                <dl class="layui-nav-child">
-                    <dd><a href="#">投稿</a></dd>
-                    <dd><a href="#">留言</a></dd>
-                    <dd><a href="#">反馈</a></dd>
-                </dl>
-            </li>-->
-        </ul>
-    </div>
+<div style=";padding-left: 72%;width: 100%;height: 28px;background-color: rgb(139,158,152)">
+    <a style="position: relative;top: 6px;" href="javascript:;" >登录</a>
+    <a style="position: relative;top: 6px;" href="">注册</a>
+    <a style="position: relative;top: 6px;" href="">找回</a>
+</div>
+<div class="layui-main">
+    <ol class="ul_li fix" style="margin-right:40%;left: 1%;height: 38px;;width: 80%;position: fixed;top: 0px" >
+        <li style="padding-left: 18%"><a href="#" style="position: relative;top: 10px;">首页</a></li>
+        <li><a href="#" style="position: relative;top: 10px;">项目展示</a></li>
+        <li><a href="#" style="position: relative;top: 10px;">寻找周边</a></li>
+        <li><a href="#" style="position: relative;top: 10px;">产品推广</a></li>
+        <li><a href="#" style="position: relative;top: 10px;">留言建议</a></li>
+        <li><a href="#" style="position: relative;top: 10px;">关于我们</a></li>
+    </ol>
 </div>
 
 </body>
