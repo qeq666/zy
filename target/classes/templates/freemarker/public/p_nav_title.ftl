@@ -38,12 +38,11 @@
 </div>
 <div class="layui-main">
     <ol class="ul_li fix" style="margin-right:40%;left: 1%;height: 38px;;width: 80%;position: fixed;top: 0px" >
-        <li style="padding-left: 18%"><a href="#" style="position: relative;top: 10px;">首页</a></li>
-        <li><a href="#" style="position: relative;top: 10px;">项目展示</a></li>
-        <li><a href="#" style="position: relative;top: 10px;">寻找周边</a></li>
-        <li><a href="#" style="position: relative;top: 10px;">产品推广</a></li>
-        <li><a href="#" style="position: relative;top: 10px;">留言建议</a></li>
-        <li><a href="#" style="position: relative;top: 10px;">关于我们</a></li>
+        <li style="padding-left: 18%"><a href="/index" target="_blank" style="position: relative;top: 10px;">首页</a></li>
+        <li><a href="/projectlist01" target="_blank" style="position: relative;top: 10px;">项目展示</a></li>
+        <li><a href="/zydwa" target="_blank" style="position: relative;top: 10px;">寻找周边</a></li>
+        <li><a href="/lyfk" target="_blank" style="position: relative;top: 10px;">留言建议</a></li>
+        <li><a href="/Gywm"  target="_blank" style="position: relative;top: 10px;">关于我们</a></li>
     </ol>
 </div>
 

@@ -24,20 +24,20 @@
         .ep-pages-all{font-size:12px;vertical-align:top}
     </style>
 </head>
-<body>
-<iframe  src="p_nav_title" scrolling="no" style=";overflow:scroll;width:100%;height: 80px;;" frameborder="0"></iframe>
+<body style="background-color: rgba(198,243,255,0.4)">
+<iframe  src="p_nav_title" scrolling="no" style=";overflow:scroll;width:100%;height: 100px;;" frameborder="0"></iframe>
 <div class="layui-main">
     <div class="layui-container">
         <div class="layui-col-md12">
             <span class="layui-breadcrumb">
               <a href="">首页</a>
-              <a href="">分类</a>
-              <a><cite>枪战游戏</cite></a>
+              <a href="">项目展示</a>
+              <a><cite>项目列表</cite></a>
             </span>
         </div>
         <div class="layui-col-md12">
             <fieldset class="layui-elem-field layui-field-title site-title">
-                <legend><a name="compatibility" style="">枪战游戏</a></legend>
+                <legend><a name="compatibility" style="">项目列表</a></legend>
             </fieldset>
         </div>
         <div class="layui-col-md12">
@@ -74,6 +74,15 @@
                     </#if>
                 </div>
             </fieldset>
+        </div>
+        <div class="layui-col-md3"  >
+            <img src="img/arrow-right.png" style="width: 22px;height: 21px;position: absolute;left: 92%;top: 1px;z-index: 1">
+            <div class="layui-card">
+                <div class="layui-card-header">一分钟了解</div>
+                <div class="layui-card-body">
+                    <img src="img/00.png" style="width: 250px;height: 210px;" alt="">
+                </div>
+            </div>
         </div>
         <div class="layui-col-6" >
             这里引用的右边最新信息和联系我们

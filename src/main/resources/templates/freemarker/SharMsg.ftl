@@ -87,7 +87,9 @@
     <a href="" style="font-size: 18px">共享中心-信息中心-周边搜索</a><br>
     <a href="" style="font-size: 18px;margin-left: 15%">众游网络&copy;版权所有</a>
 </div>
-
+<div class="layui-col-md8" style="padding-left: 50%">
+    ${idxinfo.home_topinfo }
+</div>
 
 <script src="js/jquery-1.8.0.min.js"></script>
 <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&key=bdc6b4745e57a3b82f107bb5ff53e59f"></script>

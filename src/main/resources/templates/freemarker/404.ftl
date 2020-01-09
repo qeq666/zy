@@ -43,6 +43,9 @@
         </div>
     </div>
 </div>
+<div class="layui-col-md8" style="padding-left: 50%">
+    ${idxinfo.home_topinfo }
+</div>
 </body>
 
 </html>

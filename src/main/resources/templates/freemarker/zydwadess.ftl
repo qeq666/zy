@@ -103,7 +103,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color: rgba(198,243,255,0.4)">
 <div class="layui-edge-right" style="margin-left: 50%;font-size: 18px">Hello!陌生人你好!发布信息走右边</div>
 <ul style="width: 280px;position: absolute">
     <#if Session["shares"]?exists>
@@ -128,9 +128,12 @@
         </li>
     </#if>
 </ul>
-<div id="container" style="width: 70%;height: 748px;float: right;"></div>
+<div id="container" style="width: 80%;height: 748px;float: right;"></div>
 <div class="info">
     <a href="JumpShares">心动了!我也要来发布一份。</a>
+</div>
+<div class="layui-col-md8" style="padding-left: 42%">
+    ${idxinfo.home_topinfo }
 </div>
 <#--<script src="layui.js"></script>-->
 <script src="https://layui.hcwl520.com.cn/layui-v2.5.4/layui.js"></script>

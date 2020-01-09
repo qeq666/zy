@@ -36,6 +36,9 @@
     </div>
     <p>试试问问管理吧</p>
 </div>
+<div class="layui-col-md8" style="padding-left: 50%">
+    ${idxinfo.home_topinfo }
+</div>
 </body>
 <script type="text/javascript" src="https://www.17sucai.com/preview/945243/2018-02-12/404/js/404.js" ></script>
 </html>

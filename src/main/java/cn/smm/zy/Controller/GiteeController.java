@@ -43,7 +43,7 @@ public class GiteeController {
         String access_token = (String) jsonObject.get("access_token");
         String refresh_token = (String) jsonObject.get("refresh_token");
         System.out.println(access_token + ">>>>>>>>>>>>>" + refresh_token);
-        JSONObject gitee = GiteeUtils.tokenOninfos(code);
+        JSONObject gitee = GiteeUtils.tokenOninfos(access_token);
         Object id = gitee.get("id");
         Object login = gitee.get("login");
         Object name = gitee.get("name");

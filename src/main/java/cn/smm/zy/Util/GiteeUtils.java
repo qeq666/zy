@@ -81,7 +81,8 @@ public class GiteeUtils {
         CloseableHttpClient client = null;
         HttpResponse httpResponse = null;
         try {
-            String url = "https://gitee.com/api/v5/user?access_token=ca4eebab2e0cb6429587c468c354895e";
+            String url = "https://gitee.com/api/v5/user?access_token="+token;
+            System.out.println(url+"阿斯顿撒大所大所大撒");
             HttpGet httpGet = new HttpGet(url);
             client = HttpClients.createDefault();
             String respContent = null;

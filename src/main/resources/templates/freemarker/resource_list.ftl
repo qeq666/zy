@@ -22,7 +22,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color: rgba(198,243,255,0.4)">
 <!--引用公用头部-->
 <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src=editItt height=“auto” width="100%"></iframe>
 
@@ -133,7 +133,9 @@
     </div>
 </div>
 
-
+<div class="layui-col-md8" style="padding-left: 50%">
+    ${idxinfo.home_topinfo }
+</div>
 <script src="js/jquery-1.8.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>

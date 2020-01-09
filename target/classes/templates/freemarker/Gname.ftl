@@ -68,6 +68,9 @@
         </div>
     </div>
 </div>
+<div class="layui-col-md8" style="padding-left: 50%">
+    ${idxinfo.home_topinfo }
+</div>
 <script src="js/jquery-1.8.0.min.js"></script>
 <script src="layui.js"></script>
 <script>

@@ -50,12 +50,11 @@
             </span>
 </div>
     <ol class="ul_li fix" style="display: none;height: 38px;;width: 100%;position: fixed;top: 0px" >
-        <li style="padding-left: 16%"><a href="#" style="position: relative;top: 10px;"">首页</a></li>
-        <li><a href="#" style="position: relative;top: 10px;">项目展示</a></li>
-        <li><a href="#" style="position: relative;top: 10px;">寻找周边</a></li>
-        <li><a href="#" style="position: relative;top: 10px;">产品推广</a></li>
-        <li><a href="#" style="position: relative;top: 10px;">留言建议</a></li>
-        <li><a href="#" style="position: relative;top: 10px;">关于我们</a></li>
+        <li style="padding-left: 16%"><a href="/index" style="position: relative;top: 10px;"">首页</a></li>
+        <li><a href="projectlist01" style="position: relative;top: 10px;">项目展示</a></li>
+        <li><a href="/zydwa" style="position: relative;top: 10px;">寻找周边</a></li>
+        <li><a href="lyfk" style="position: relative;top: 10px;">留言建议</a></li>
+        <li><a href="/Gywm" style="position: relative;top: 10px;">关于我们</a></li>
     </ol>
 
 <div class="layui-container">
@@ -82,7 +81,7 @@
         <ul class="layui-nav layui-bg-green" lay-filter="" >
             <li class="layui-nav-item" style="margin-left: 20px"><a href="#">首页</a></li>
             <li class="layui-nav-item"><a href="projectlist01">项目展示</a></li>
-            <li class="layui-nav-item"><a href="#">申请扶助</a></li>
+            <li class="layui-nav-item"><a href="javascript:void(0)" onclick="Login()">申请扶助[暂未开放</a></li>
             <li class="layui-nav-item"><a href="/zydwa" target="_blank">寻找周边</a></li>
             <li class="layui-nav-item"><a href="lyfk" target="_blank">留言建议</a></li>
             <li class="layui-nav-item"><a href="Gywm">关于我们</a></li>
@@ -121,7 +120,7 @@
         <#list apls as type_is>
         <div class="layui-col-md2">
             <div class="layui-anim layui-anim-up layui-anim-up" style="text-align: center">
-                <div ><img src="img/Koala.png" alt="" width="80" height="80"  style="border-radius:15px ;padding-top: 15px;display: inline-block"/></div>
+                <div ><img src="img/tico/ic${type_is_index+1}.png" alt="" width="80" height="80"  style="border-radius:15px ;padding-top: 15px;display: inline-block"/></div>
                 <div >
                     <ul class="layui-upload-list">
                         <li><a href="#">${type_is.t_back!'空'}</a></li>
@@ -214,12 +213,12 @@
         </div>
 
     </div>
-        <div class="layui-col-md8" style="padding-left: 50%">
+        <div class="layui-col-md12" style="padding-left: 50%">
             ${idxinfo.home_topinfo }
         </div>
-        <div class="layui-col-md10" style="padding-left: 30%">
+        <#--<div class="layui-col-md10" style="padding-left: 42%">
             <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1278521370'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1278521370%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
-        </div>
+        </div>-->
 </div>
 </div>
 <#--<script src="js/layui.js"></script>-->
@@ -242,7 +241,7 @@
 
     }
     function Login() {
-        layer.msg('登录你个头!');
+        layer.msg('该功能暂未开放!');
     }
     $(window).scroll(function(){
         var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;

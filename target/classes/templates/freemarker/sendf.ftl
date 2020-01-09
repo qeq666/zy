@@ -37,8 +37,8 @@
         };
     </script>
 </head>
-<body style="background-color:#F1F3F4;" onload="instantiateTextbox();">
-<iframe  src="p_nav_title" scrolling="no" style=";overflow:scroll;width:100%;height: 80px;;" frameborder="0"></iframe>
+<body style="background-color: rgba(198,243,255,0.4)" onload="instantiateTextbox();">
+<iframe  src="p_nav_title" scrolling="no" style=";overflow:scroll;width:100%;height: 100px;;" frameborder="0"></iframe>
 <div class="layui-container" style="padding-top: 10px;;">
     <div class="layui-row">
         <!--这是路径导航-->
@@ -131,12 +131,9 @@
 
     </div>
 </form>
-
-
-
-
-<div style="height:200px;"></div>
-
+<div class="layui-col-md8" style="padding-left: 50%">
+    ${idxinfo.home_topinfo }
+</div>
 <script src="js/jquery-1.8.0.min.js"></script>
 <#--<script src="layui.js"></script>-->
 <script src="https://heerey525.github.io/layui-v2.4.3/layui-v2.4.5/layui.js"></script>

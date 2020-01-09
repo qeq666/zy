@@ -20,7 +20,7 @@
     </style>
 </head>
 <body >
-<iframe  src="p_nav_title" scrolling="no" style=";overflow:scroll;width:100%;height: 80px;;" frameborder="0"></iframe>
+<iframe  src="p_nav_title" scrolling="no" style=";overflow:scroll;width:100%;height: 100px;;" frameborder="0"></iframe>
 <div class="layui-main">
     <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px">
         <legend>关于我们</legend>

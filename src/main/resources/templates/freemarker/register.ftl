@@ -47,12 +47,12 @@
 							注册
 						</div>
 						<form action="/register" method="post">
-							<input type="hidden" value="${gie.access_token}" name="rgt_gitee_acctoken" id="rgt_gitee_acctoken"/>
-							<input type="hidden" value="${gie.refresh_token}" name="rgt_refs_token" id="rgt_refs_token"/>
-							<input type="hidden" value="${gie.avatar_url}" name="avatar_url" id="avatar_url"/>
-							<input type="text" style="display: none" value="${gie.id}" name="giteeid" id="giteeid"/>
+							<input type="hidden" value="${(gie.access_token)!""}" name="rgt_gitee_acctoken" id="rgt_gitee_acctoken"/>
+							<input type="hidden" value="${(gie.refresh_token)!""}" name="rgt_refs_token" id="rgt_refs_token"/>
+							<input type="hidden" value="${(gie.avatar_url)!""}" name="avatar_url" id="avatar_url"/>
+							<input type="text" style="display: none" value="${(gie.id)!""}" name="giteeid" id="giteeid"/>
 							<div class="form_text_ipt">
-								<input id="name" name="name" value="${gie.login}" type="text" onblur="chekuser()" placeholder="手机号/邮箱">
+								<input id="name" name="name" value="${(gie.login)!""}" type="text" onblur="chekuser()" placeholder="手机号/邮箱">
 							</div>
 							<div class="ececk_warning"><span>&nbsp;</span></div>
 							<div class="form_text_ipt">
@@ -95,6 +95,9 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="layui-col-md8" style="padding-left: 50%">
+			${idxinfo.home_topinfo }
 		</div>
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript" src="js/common.js" ></script>

@@ -5,8 +5,6 @@ import cn.smm.zy.Util.json_N;
 import cn.smm.zy.pojo.zy_regisger_user;
 import cn.smm.zy.pojo.zy_user;
 import cn.smm.zy.service.loginservice;
-import cn.smm.zy.service.zy_userService;
-import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

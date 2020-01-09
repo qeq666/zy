@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/layui.css">
     <link rel='icon' href="img/favicon.ico" type='image/x-ico' />
 </head>
-<body style="background-color: #F7F3F7">
+<body style="background-color: rgba(198,243,255,0.4)">
     <div class="layui-main">
         <div class="layui-container">
             <div class="layui-row">
@@ -89,6 +89,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="layui-col-md8" style="padding-left: 50%">
+        ${idxinfo.home_topinfo }
     </div>
 <script src="js/jquery-1.8.0.min.js"></script>
 <#--<script src="/layui.js"></script>-->

@@ -47,6 +47,9 @@
 
 
 </div><!-- /container -->
+<div class="layui-col-md8" style="padding-left: 50%">
+    ${idxinfo.home_topinfo }
+</div>
 <script src="js/classie.js"></script>
 <script>
     (function () {

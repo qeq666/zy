@@ -21,6 +21,8 @@
 <li><a href="#">板块更新</a></li>
 <li><a href="#">板块更新</a></li>
 <li><a href="#">板块更新</a></li>-->
-
+<div class="layui-col-md8" style="padding-left: 50%">
+    ${idxinfo.home_topinfo }
+</div>
 </body>
 </html>

@@ -285,7 +285,7 @@ public class adController {
     }
     /*更新网页基本信息*/
     @RequestMapping("/updattHome")
-    public String UpdateHome(HttpServletRequest req){
+    public String UpdateHome(HttpServletRequest req,HttpSession session){
         /*网页茶餐过来的信息*/
         String stitle = req.getParameter("stitle");
         String skeywords = req.getParameter("skeywords");
@@ -318,8 +318,8 @@ public class adController {
         }else{
             js = new json_N("修改失败,请清除缓存后重试","/info");
         }
-        req.setAttribute("view",js.getView());
-        req.setAttribute("msg",js.getMsg());
+        session.setAttribute("view",js.getView());
+        session.setAttribute("msg",js.getMsg());
         /*return "freemarker/zhongy/Jump";*/
         return "freemarker/zhongy/Jump";
     }
@@ -626,7 +626,6 @@ public class adController {
      * @param req
      * @return
      */
-    @ResponseBody
     @RequestMapping("/addType")
     public String addType(HttpServletRequest req,HttpSession session){
         zy_type zyt = new zy_type(req.getParameter("title"),req.getParameter("s_desc"));

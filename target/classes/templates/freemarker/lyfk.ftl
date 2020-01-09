@@ -12,7 +12,7 @@
             padding: 0;
         }
     </style>
-</head>
+</head style="background-color: rgba(198,243,255,0.4)">
 <body>
 <div style="width: 100%;height: 321px;background: url('img/lybj.jpg');background-size:100% " >
     <div>
@@ -77,8 +77,9 @@
         </tbody>
     </table>
 </div>
-<div style="margin-top: 20%"></div>
-
+<div class="layui-col-md8" style="padding-left: 50%">
+    ${idxinfo.home_topinfo }
+</div>
 <script src="js/jquery-1.8.0.min.js"></script>
 <script src="layui.js"></script>
 <script>
